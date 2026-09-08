@@ -14,7 +14,7 @@ export default function CostCalculator({ onOpenCounselling }) {
   const activeCountryData = DESTINATIONS_DATA.find(c => c.name.toLowerCase() === selectedCountry.toLowerCase()) || availableCountries[0];
 
   return (
-    <section className="section-padding" style={{ backgroundColor: '#F7FAF5' }}>
+    <section className="section-padding" style={{ backgroundColor: '#F7FAF5', paddingBottom: 0 }}>
       <div className="container">
         
         <div style={{
@@ -158,6 +158,14 @@ export default function CostCalculator({ onOpenCounselling }) {
         </div>
 
       </div>
+
+      {/* Seamless Color Blend into UniversitiesSection */}
+      <div style={{
+        width: '100%',
+        height: '110px',
+        background: 'linear-gradient(180deg, #F7FAF5 0%, #EAF2E2 100%)',
+        marginTop: '3.5rem'
+      }} />
 
       <style>{`
         @media (max-width: 992px) {

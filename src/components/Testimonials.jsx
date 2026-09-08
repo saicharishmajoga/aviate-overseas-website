@@ -4,7 +4,7 @@ import { REAL_TESTIMONIALS } from '../data/consultancyData';
 
 export default function Testimonials() {
   return (
-    <section className="section-padding" style={{ backgroundColor: '#F3E8DA' }}>
+    <section className="section-padding" style={{ backgroundColor: '#F3E8DA', paddingBottom: 0 }}>
       <div className="container">
 
         {/* Section Header */}
@@ -80,6 +80,14 @@ export default function Testimonials() {
         </div>
 
       </div>
+
+      {/* Seamless Color Blend into AboutSection */}
+      <div style={{
+        width: '100%',
+        height: '110px',
+        background: 'linear-gradient(180deg, #F3E8DA 0%, #F8E4E1 100%)',
+        marginTop: '3.5rem'
+      }} />
 
       <style>{`
         .testimonial-card:hover {

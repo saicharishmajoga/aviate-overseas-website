@@ -4,7 +4,7 @@ import { PROCESS_STEPS } from '../data/consultancyData';
 
 export default function JourneyProcess({ onOpenCounselling }) {
   return (
-    <section className="section-padding" style={{ backgroundColor: '#F7EEDC' }}>
+    <section className="section-padding" style={{ backgroundColor: '#F7EEDC', paddingBottom: 0 }}>
       <div className="container">
 
         {/* Section Header */}
@@ -109,6 +109,14 @@ export default function JourneyProcess({ onOpenCounselling }) {
         </div>
 
       </div>
+
+      {/* Seamless Color Blend into DestinationsSection */}
+      <div style={{
+        width: '100%',
+        height: '110px',
+        background: 'linear-gradient(180deg, #F7EEDC 0%, #F7FAF5 100%)',
+        marginTop: '3.5rem'
+      }} />
 
       <style>{`
         .process-card:hover {

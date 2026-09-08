@@ -10,7 +10,7 @@ export default function ProgramsSection({ onOpenCounselling, onSelectCountry }) 
     : PROGRAMS_DATA.filter(p => p.id === activeTab);
 
   return (
-    <section id="programs" className="section-padding" style={{ backgroundColor: '#F4F7FB' }}>
+    <section id="programs" className="section-padding" style={{ backgroundColor: '#F4F7FB', paddingBottom: 0 }}>
       <div className="container">
         
         {/* Header */}
@@ -224,6 +224,14 @@ export default function ProgramsSection({ onOpenCounselling, onSelectCountry }) 
         </div>
 
       </div>
+
+      {/* Seamless Color Blend into Why Choose Us section */}
+      <div style={{
+        width: '100%',
+        height: '110px',
+        background: 'linear-gradient(180deg, #F4F7FB 0%, #F7EEDC 100%)',
+        marginTop: '3.5rem'
+      }} />
 
       <style>{`
         .program-card:hover {

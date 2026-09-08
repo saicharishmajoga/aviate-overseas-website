@@ -13,7 +13,7 @@ export default function UniversitiesSection({ onOpenCounselling }) {
   );
 
   return (
-    <section id="universities" className="section-padding" style={{ backgroundColor: '#EAF2E2' }}>
+    <section id="universities" className="section-padding" style={{ backgroundColor: '#EAF2E2', paddingBottom: 0 }}>
       <div className="container">
 
         {/* Section Header */}
@@ -127,6 +127,14 @@ export default function UniversitiesSection({ onOpenCounselling }) {
         </div>
 
       </div>
+
+      {/* Seamless Color Blend into Testimonials section */}
+      <div style={{
+        width: '100%',
+        height: '110px',
+        background: 'linear-gradient(180deg, #EAF2E2 0%, #F3E8DA 100%)',
+        marginTop: '3.5rem'
+      }} />
 
       <style>{`
         .uni-card:hover, .uni-card-active {
