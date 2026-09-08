@@ -27,7 +27,7 @@ export default function WhyChooseUs({ onOpenCounselling }) {
   ];
 
   return (
-    <section id="why-us" className="section-padding" style={{ backgroundColor: '#FAF9F6' }}>
+    <section id="why-us" className="section-padding" style={{ backgroundColor: '#F7EEDC' }}>
       <div className="container">
 
         {/* Section Header */}

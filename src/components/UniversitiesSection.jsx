@@ -13,7 +13,7 @@ export default function UniversitiesSection({ onOpenCounselling }) {
   );
 
   return (
-    <section id="universities" className="section-padding" style={{ backgroundColor: '#FAFAF8' }}>
+    <section id="universities" className="section-padding" style={{ backgroundColor: '#EAF2E2' }}>
       <div className="container">
 
         {/* Section Header */}
