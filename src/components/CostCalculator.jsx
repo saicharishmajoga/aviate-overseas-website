@@ -14,7 +14,7 @@ export default function CostCalculator({ onOpenCounselling }) {
   const activeCountryData = DESTINATIONS_DATA.find(c => c.name.toLowerCase() === selectedCountry.toLowerCase()) || availableCountries[0];
 
   return (
-    <section className="section-padding" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #E2E8F0' }}>
+    <section className="section-padding" style={{ backgroundColor: '#F7FAF5' }}>
       <div className="container">
         
         <div style={{

@@ -15,9 +15,10 @@ export default function StatsBar() {
   return (
     <section style={{
       position: 'relative',
-      marginTop: '3.5rem',
-      zIndex: 10,
-      marginBottom: '5rem'
+      backgroundColor: '#F4F7FB',
+      paddingTop: '3.5rem',
+      paddingBottom: '2.5rem',
+      zIndex: 10
     }}>
       <div className="container">
         <div style={{

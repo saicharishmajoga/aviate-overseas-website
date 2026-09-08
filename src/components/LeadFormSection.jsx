@@ -37,7 +37,7 @@ export default function LeadFormSection() {
   };
 
   return (
-    <section id="contact-form" className="section-padding bg-slate" style={{ borderTop: '1px solid #E2E8F0' }}>
+    <section id="contact-form" className="section-padding" style={{ backgroundColor: '#FDF8F6' }}>
       <div className="container">
         
         <div style={{

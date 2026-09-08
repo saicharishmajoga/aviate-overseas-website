@@ -185,7 +185,7 @@ export default function Hero({ onOpenCounselling }) {
         >
           <path
             d="M0,110 C160,110 280,55 400,55 C550,55 650,140 750,140 C900,140 1080,25 1440,20 L1440,260 L0,260 Z"
-            fill="#FFFFFF"
+            fill="#F4F7FB"
           />
         </svg>
       </div>

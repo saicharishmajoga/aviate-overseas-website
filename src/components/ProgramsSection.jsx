@@ -10,7 +10,7 @@ export default function ProgramsSection({ onOpenCounselling, onSelectCountry }) 
     : PROGRAMS_DATA.filter(p => p.id === activeTab);
 
   return (
-    <section id="programs" className="section-padding" style={{ backgroundColor: '#FFFFFF' }}>
+    <section id="programs" className="section-padding" style={{ backgroundColor: '#F4F7FB' }}>
       <div className="container">
         
         {/* Header */}

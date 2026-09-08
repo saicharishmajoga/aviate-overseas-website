@@ -11,7 +11,7 @@ export default function Footer() {
   };
 
   return (
-    <footer style={{ position: 'relative', backgroundColor: '#FFFFFF', paddingTop: '0' }}>
+    <footer style={{ position: 'relative', backgroundColor: '#FDF8F6', paddingTop: '0' }}>
       
       {/* Smooth Wide Curved Top Boundary (Right Curve Reaching Map Container) */}
       <div style={{ position: 'relative', width: '100%', overflow: 'hidden', lineHeight: 0, zIndex: 2, marginTop: '-4.5rem', marginBottom: '-1px' }}>

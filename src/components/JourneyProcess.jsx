@@ -4,7 +4,7 @@ import { PROCESS_STEPS } from '../data/consultancyData';
 
 export default function JourneyProcess({ onOpenCounselling }) {
   return (
-    <section className="section-padding bg-slate" style={{ borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0' }}>
+    <section className="section-padding" style={{ backgroundColor: '#FAF9F6' }}>
       <div className="container">
 
         {/* Section Header */}

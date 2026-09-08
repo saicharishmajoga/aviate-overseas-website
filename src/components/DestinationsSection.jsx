@@ -21,7 +21,7 @@ export default function DestinationsSection({ onSelectCountry, onOpenCounselling
   });
 
   return (
-    <section id="countries" className="section-padding bg-slate">
+    <section id="countries" className="section-padding" style={{ backgroundColor: '#F7FAF5' }}>
       <div className="container">
 
         {/* Header */}

@@ -4,7 +4,7 @@ import { COMPANY_INFO, CORE_VALUES } from '../data/consultancyData';
 
 export default function AboutSection({ onOpenCounselling }) {
   return (
-    <section id="about-us" className="section-padding bg-slate" style={{ borderTop: '1px solid #E2E8F0' }}>
+    <section id="about-us" className="section-padding" style={{ backgroundColor: '#FDF8F6' }}>
       <div className="container">
         
         <div style={{

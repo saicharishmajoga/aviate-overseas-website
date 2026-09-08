@@ -4,7 +4,7 @@ import { COMPANY_INFO } from '../data/consultancyData';
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="section-padding" style={{ backgroundColor: '#FFFFFF' }}>
+    <section id="contact" className="section-padding" style={{ backgroundColor: '#FDF8F6' }}>
       <div className="container">
 
         {/* Section Header */}

@@ -4,7 +4,7 @@ import { REAL_TESTIMONIALS } from '../data/consultancyData';
 
 export default function Testimonials() {
   return (
-    <section className="section-padding" style={{ backgroundColor: '#FFFFFF' }}>
+    <section className="section-padding" style={{ backgroundColor: '#FCFBF9' }}>
       <div className="container">
 
         {/* Section Header */}
