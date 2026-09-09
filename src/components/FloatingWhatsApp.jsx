@@ -14,8 +14,9 @@ export default function FloatingWhatsApp() {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'flex-end',
-      gap: '0.5rem'
-    }}>
+      gap: '0.5rem',
+      maxWidth: 'calc(100vw - 2rem)'
+    }} className="floating-wa-wrap">
       {/* Tooltip Box */}
       {showTooltip && (
         <div style={{
@@ -30,8 +31,9 @@ export default function FloatingWhatsApp() {
           alignItems: 'center',
           gap: '0.6rem',
           border: '1px solid rgba(255, 255, 255, 0.15)',
-          animation: 'bounceTooltip 3s infinite'
-        }}>
+          animation: 'bounceTooltip 3s infinite',
+          maxWidth: '100%'
+        }} className="floating-wa-tooltip">
           <span>Need help? <strong>Chat with us on WhatsApp</strong></span>
           <button
             onClick={() => setShowTooltip(false)}
@@ -63,7 +65,7 @@ export default function FloatingWhatsApp() {
         className="floating-wa-btn"
         title="Chat on WhatsApp"
       >
-        <MessageSquare size={32} />
+        <MessageSquare size={30} />
 
         {/* Pulse Notification Ring */}
         <span style={{
@@ -94,6 +96,20 @@ export default function FloatingWhatsApp() {
         @keyframes bounceTooltip {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-5px); }
+        }
+        @media (max-width: 576px) {
+          .floating-wa-wrap {
+            bottom: 1rem !important;
+            right: 1rem !important;
+          }
+          .floating-wa-btn {
+            width: 52px !important;
+            height: 52px !important;
+          }
+          .floating-wa-tooltip {
+            font-size: 0.78rem !important;
+            padding: 0.5rem 0.75rem !important;
+          }
         }
       `}</style>
     </div>

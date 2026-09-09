@@ -172,6 +172,9 @@ export default function CostCalculator({ onOpenCounselling }) {
           .calc-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
           .calc-box { padding: 2rem 1.5rem !important; }
         }
+        @media (max-width: 576px) {
+          .calc-box { padding: 1.5rem 1rem !important; border-radius: 16px !important; }
+        }
       `}</style>
     </section>
   );

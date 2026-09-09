@@ -120,7 +120,7 @@ export default function DestinationsSection({ onSelectCountry, onOpenCounselling
           </div>
 
           {/* Search Box */}
-          <div style={{ position: 'relative', width: '280px' }}>
+          <div style={{ position: 'relative', width: '100%', maxWidth: '280px' }} className="search-box-wrap">
             <Search size={16} color="#94A3B8" style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)' }} />
             <input
               type="text"

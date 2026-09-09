@@ -21,6 +21,7 @@ export default function Footer() {
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
           style={{ width: '100%', height: '175px', display: 'block' }}
+          className="footer-curve-svg"
         >
           <path
             d="M0,140 C180,140 360,60 520,60 C680,60 780,110 880,110 C1080,110 1280,20 1440,0 L1440,200 L0,200 Z"
@@ -243,10 +244,14 @@ export default function Footer() {
           color: #F58220 !important;
         }
         @media (max-width: 992px) {
-          .footer-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          .footer-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 2rem !important; }
+        }
+        @media (max-width: 768px) {
+          .footer-curve-svg { height: 90px !important; }
         }
         @media (max-width: 576px) {
-          .footer-grid { grid-template-columns: 1fr !important; }
+          .footer-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+          .footer-curve-svg { height: 70px !important; }
         }
       `}</style>
     </footer>

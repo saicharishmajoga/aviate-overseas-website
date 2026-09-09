@@ -330,6 +330,9 @@ export default function LeadFormSection() {
           .form-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
           .form-card-box { padding: 2.5rem 1.5rem !important; }
         }
+        @media (max-width: 576px) {
+          .form-card-box { padding: 1.75rem 1.1rem !important; border-radius: 18px !important; }
+        }
       `}</style>
     </section>
   );

@@ -12,12 +12,31 @@ export default function Hero({ onOpenCounselling }) {
       paddingBottom: '11.5rem',
       overflow: 'hidden'
     }}>
+      <style>{`
+        @media (max-width: 992px) {
+          .hero-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; text-align: center; }
+          .hero-title { font-size: clamp(1.85rem, 6vw, 2.6rem) !important; }
+          .hero-grid > div { margin: 0 auto; width: 100%; }
+          .hero-ctas { justify-content: center; }
+          .hero-trust-bar { justify-content: center; }
+          .hero-img-box { height: 340px !important; border-radius: 24px !important; }
+        }
+        @media (max-width: 576px) {
+          #hero { padding-top: 2rem !important; padding-bottom: 6rem !important; }
+          .hero-ctas { flex-direction: column; width: 100%; }
+          .hero-ctas .btn { width: 100%; }
+          .hero-curve-svg { height: 90px !important; }
+          .hero-img-box { height: 270px !important; }
+        }
+      `}</style>
+
       {/* Background Graphic Elements & Soft Glows */}
       <div style={{
         position: 'absolute',
         top: '-10%',
-        right: '-5%',
-        width: '550px',
+        right: '0',
+        width: '100%',
+        maxWidth: '550px',
         height: '550px',
         borderRadius: '50%',
         background: 'radial-gradient(circle, rgba(245, 130, 32, 0.15) 0%, rgba(11, 25, 48, 0) 70%)',
@@ -26,8 +45,9 @@ export default function Hero({ onOpenCounselling }) {
       <div style={{
         position: 'absolute',
         bottom: '5%',
-        left: '-5%',
-        width: '480px',
+        left: '0',
+        width: '100%',
+        maxWidth: '480px',
         height: '480px',
         borderRadius: '50%',
         background: 'radial-gradient(circle, rgba(30, 58, 138, 0.4) 0%, rgba(11, 25, 48, 0) 70%)',
@@ -72,7 +92,7 @@ export default function Hero({ onOpenCounselling }) {
             </p>
 
             {/* CTAs Group */}
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }} className="hero-ctas">
               <button
                 onClick={() => onOpenCounselling()}
                 className="btn btn-orange btn-lg"
@@ -108,19 +128,19 @@ export default function Hero({ onOpenCounselling }) {
               alignItems: 'center',
               gap: '1rem',
               flexWrap: 'wrap'
-            }}>
+            }} className="hero-trust-bar">
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', color: '#E2E8F0' }}>
                 <CheckCircle2 size={15} color="#F58220" /> Personalized Guidance
               </div>
-              <span style={{ opacity: 0.3 }}>•</span>
+              <span style={{ opacity: 0.3 }} className="hide-mobile">•</span>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', color: '#E2E8F0' }}>
                 <CheckCircle2 size={15} color="#F58220" /> University Selection
               </div>
-              <span style={{ opacity: 0.3 }}>•</span>
+              <span style={{ opacity: 0.3 }} className="hide-mobile">•</span>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', color: '#E2E8F0' }}>
                 <CheckCircle2 size={15} color="#F58220" /> Application Support
               </div>
-              <span style={{ opacity: 0.3 }}>•</span>
+              <span style={{ opacity: 0.3 }} className="hide-mobile">•</span>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', color: '#E2E8F0' }}>
                 <CheckCircle2 size={15} color="#F58220" /> Visa Assistance
               </div>
@@ -128,7 +148,7 @@ export default function Hero({ onOpenCounselling }) {
           </div>
 
           {/* Right Column: Visual Student Photo */}
-          <div style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
+          <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', width: '100%' }}>
 
             {/* Main Rounded Image Container */}
             <div style={{
@@ -140,7 +160,7 @@ export default function Hero({ onOpenCounselling }) {
               overflow: 'hidden',
               boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
               border: '4px solid rgba(255, 255, 255, 0.12)'
-            }}>
+            }} className="hero-img-box">
               <img
                 src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80"
                 alt="International Students Studying Abroad with Aviate"
@@ -182,6 +202,7 @@ export default function Hero({ onOpenCounselling }) {
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
           style={{ width: '100%', height: '200px', display: 'block' }}
+          className="hero-curve-svg"
         >
           <path
             d="M0,110 C160,110 280,55 400,55 C550,55 650,140 750,140 C900,140 1080,25 1440,20 L1440,260 L0,260 Z"
@@ -189,14 +210,6 @@ export default function Hero({ onOpenCounselling }) {
           />
         </svg>
       </div>
-
-      <style>{`
-        @media (max-width: 992px) {
-          .hero-grid { grid-template-columns: 1fr !important; gap: 3rem !important; text-align: center; }
-          .hero-title { font-size: 2.3rem !important; }
-          .hero-grid > div { margin: 0 auto; }
-        }
-      `}</style>
     </section>
   );
 }

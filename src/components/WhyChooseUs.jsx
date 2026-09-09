@@ -88,7 +88,7 @@ export default function WhyChooseUs({ onOpenCounselling }) {
           boxShadow: '0 25px 50px -12px rgba(11, 25, 48, 0.3)',
           position: 'relative',
           overflow: 'hidden'
-        }}>
+        }} className="model-3c-box">
           {/* Subtle Background Glow */}
           <div style={{
             position: 'absolute',
@@ -101,7 +101,7 @@ export default function WhyChooseUs({ onOpenCounselling }) {
           }} />
 
           <div style={{ textAlignment: 'center', maxWidth: '750px', margin: '0 auto 3rem auto', textAlign: 'center' }}>
-            <h3 style={{ fontSize: '2.2rem', color: '#FFFFFF', fontWeight: 800, marginBottom: '0.75rem' }}>
+            <h3 style={{ fontSize: '2.2rem', color: '#FFFFFF', fontWeight: 800, marginBottom: '0.75rem' }} className="model-3c-title">
               The Aviate <span style={{ color: '#F58220' }}>3C Model</span>
             </h3>
             <p style={{ color: '#CBD5E1', fontSize: '1.05rem', lineHeight: 1.6 }}>
@@ -121,7 +121,7 @@ export default function WhyChooseUs({ onOpenCounselling }) {
                   backdropFilter: 'blur(10px)',
                   transition: 'all 0.3s ease'
                 }}
-                className="3c-card"
+                className="three-c-card"
               >
                 <div style={{
                   display: 'inline-flex',
@@ -155,6 +155,7 @@ export default function WhyChooseUs({ onOpenCounselling }) {
             <button
               onClick={() => onOpenCounselling()}
               className="btn btn-orange btn-lg"
+              style={{ width: '100%' }}
             >
               Get Matched via 3C Model Now
             </button>
@@ -169,9 +170,18 @@ export default function WhyChooseUs({ onOpenCounselling }) {
           box-shadow: 0 15px 30px rgba(11, 25, 48, 0.08) !important;
           border-color: #CBD5E1 !important;
         }
-        .3c-card:hover {
+        .three-c-card:hover {
           background: rgba(255, 255, 255, 0.1) !important;
           transform: translateY(-4px);
+        }
+        @media (max-width: 768px) {
+          .model-3c-box {
+            padding: 2rem 1.25rem !important;
+            border-radius: 18px !important;
+          }
+          .model-3c-title {
+            font-size: clamp(1.5rem, 5vw, 2rem) !important;
+          }
         }
       `}</style>
     </section>

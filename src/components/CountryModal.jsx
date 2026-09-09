@@ -63,7 +63,7 @@ export default function CountryModal({ country, onClose, onBookCounselling }) {
         )}
 
         {/* Overview Stats */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '1.75rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '1.75rem' }} className="country-modal-stats">
           <div style={{ background: '#F8FAFC', padding: '1rem', borderRadius: '10px', border: '1px solid #E2E8F0' }}>
             <div style={{ color: '#F58220', fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.2rem', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
               <DollarSign size={14} /> Tuition Fee
@@ -89,7 +89,7 @@ export default function CountryModal({ country, onClose, onBookCounselling }) {
           <h4 style={{ fontSize: '1.1rem', color: '#0B1930', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <CheckCircle size={18} color="#F58220" /> Key Benefits for Students
           </h4>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.6rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.6rem' }} className="country-modal-benefits">
             {country.highlights.map((h, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.92rem', color: '#334155' }}>
                 <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#F58220' }}></div>
@@ -135,6 +135,17 @@ export default function CountryModal({ country, onClose, onBookCounselling }) {
           </a>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 600px) {
+          .country-modal-stats {
+            grid-template-columns: 1fr !important;
+          }
+          .country-modal-benefits {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }

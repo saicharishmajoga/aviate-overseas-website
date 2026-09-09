@@ -41,7 +41,7 @@ export default function AboutSection({ onOpenCounselling }) {
               boxShadow: '0 15px 30px rgba(0,0,0,0.3)',
               maxWidth: '320px',
               border: '2px solid #F58220'
-            }}>
+            }} className="about-motto-card">
               <div style={{ fontSize: '0.8rem', color: '#F58220', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.2rem' }}>
                 Aviate Corporate Ethos
               </div>
@@ -66,7 +66,7 @@ export default function AboutSection({ onOpenCounselling }) {
             </p>
 
             {/* Vision & Mission Cards */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '2rem' }} className="vision-mission-grid">
               <div style={{ background: '#FFFFFF', padding: '1.25rem', borderRadius: '14px', border: '1px solid #E2E8F0', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
                 <div style={{ color: '#F58220', fontWeight: 800, fontSize: '0.85rem', textTransform: 'uppercase', marginBottom: '0.3rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                   <Target size={16} /> Our Vision
@@ -89,6 +89,7 @@ export default function AboutSection({ onOpenCounselling }) {
             <button
               onClick={() => onOpenCounselling()}
               className="btn btn-orange btn-lg"
+              style={{ width: '100%' }}
             >
               Talk to Our Team in Visakhapatnam
             </button>
@@ -101,6 +102,18 @@ export default function AboutSection({ onOpenCounselling }) {
       <style>{`
         @media (max-width: 992px) {
           .about-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+        }
+        @media (max-width: 768px) {
+          .about-motto-card {
+            position: relative !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            margin-top: 1rem !important;
+            max-width: 100% !important;
+          }
+          .vision-mission-grid {
+            grid-template-columns: 1fr !important;
+          }
         }
       `}</style>
     </section>
