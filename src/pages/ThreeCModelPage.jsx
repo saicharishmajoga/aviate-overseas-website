@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
-import { Sparkles, ArrowRight, CheckCircle2, Award, Target, Building2, ShieldCheck, Compass } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Target, Building2, ShieldCheck } from 'lucide-react';
 import LeadFormSection from '../components/LeadFormSection';
 import { AVIATE_3C_MODEL } from '../data/consultancyData';
 
@@ -67,8 +67,8 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
     <div className="three-c-model-page">
       {/* Reusable Hero Banner with Home Page Design */}
       <Hero
-        badgeTag="Proprietary Methodology"
-        badgeIcon={Sparkles}
+        badgeTag=""
+        badgeIcon={null}
         titlePrefix="The Aviate "
         titleHighlight="3C Model"
         titleSuffix=""
@@ -79,7 +79,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
         onOpenCounselling={onOpenCounselling}
       />
 
-      {/* 3C Overview Pillars Summary */}
+      {/* 1. 3C Overview Pillars Summary on Light Blue (#F4F7FB) */}
       <section style={{ backgroundColor: '#F4F7FB', paddingTop: '1rem', paddingBottom: '2.5rem' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem', textAlign: 'left' }} className="grid-3">
@@ -95,12 +95,11 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
         </div>
       </section>
 
-      {/* 2. C1 — COUNSELLING */}
-      <section className="section-padding" style={{ backgroundColor: '#FFFFFF' }}>
+      {/* 2. C1 — COUNSELLING on Light Blue (#F4F7FB) */}
+      <section className="section-padding" style={{ backgroundColor: '#F4F7FB' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: '3.5rem', alignItems: 'center' }} className="grid-2">
             <div>
-              <span className="badge badge-orange" style={{ fontSize: '0.85rem', marginBottom: '0.75rem' }}>C1 • PILLAR ONE</span>
               <h2 className="section-title">C1 — Counselling & Profile Alignment</h2>
               <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: 1.65, marginBottom: '1.5rem' }}>
                 Before recommending any course or university, we take time to thoroughly understand you. We analyze your academic background, career ambitions, financial plan, and personal strengths to design a customized study-abroad roadmap.
@@ -112,7 +111,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
                   </div>
                 ))}
               </div>
-              <div style={{ background: '#F8FAFC', padding: '1.25rem', borderRadius: '12px', border: '1px solid #CBD5E1', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
+              <div style={{ background: '#FFFFFF', padding: '1.25rem', borderRadius: '12px', border: '1px solid #CBD5E1', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
                 <strong style={{ color: '#F58220', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.05em' }}>Key Outcomes of C1:</strong>
                 <p style={{ color: '#0B1930', fontSize: '0.95rem', fontWeight: 700, marginTop: '0.3rem' }}>
                   Clear career direction identified • Optimal course match selected • Suitable country framework determined • Personalized 1-on-1 study roadmap created.
@@ -136,8 +135,8 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
         </div>
       </section>
 
-      {/* 3. C2 — COLLEGE / UNIVERSITY SELECTION */}
-      <section className="section-padding" style={{ backgroundColor: '#F7EEDC' }}>
+      {/* 3. C2 — COLLEGE / UNIVERSITY SELECTION on Light Blue (#F4F7FB) */}
+      <section className="section-padding" style={{ backgroundColor: '#F4F7FB' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: '3.5rem', alignItems: 'center' }} className="grid-2">
             <div style={{ background: '#FFFFFF', borderRadius: '24px', padding: '2.5rem', border: '1px solid #CBD5E1', boxShadow: '0 20px 40px rgba(11,25,48,0.06)' }}>
@@ -154,7 +153,6 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
             </div>
 
             <div>
-              <span className="badge badge-orange" style={{ fontSize: '0.85rem', marginBottom: '0.75rem' }}>C2 • PILLAR TWO</span>
               <h2 className="section-title">C2 — College & Course Selection</h2>
               <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: 1.65, marginBottom: '1.5rem' }}>
                 With your profile roadmap established, we guide you in selecting the best-fit university and managing error-free application submissions to secure official offer letters and maximum scholarship bursaries.
@@ -177,12 +175,11 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
         </div>
       </section>
 
-      {/* 4. C3 — COMPLETION / VISA */}
-      <section className="section-padding" style={{ backgroundColor: '#F7FAF5' }}>
+      {/* 4. C3 — COMPLETION / VISA on Light Blue (#F4F7FB) */}
+      <section className="section-padding" style={{ backgroundColor: '#F4F7FB' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: '3.5rem', alignItems: 'center' }} className="grid-2">
             <div>
-              <span className="badge badge-orange" style={{ fontSize: '0.85rem', marginBottom: '0.75rem' }}>C3 • PILLAR THREE</span>
               <h2 className="section-title">C3 — Completion & Student Visa Approval</h2>
               <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: 1.65, marginBottom: '1.5rem' }}>
                 Once your university offer letter is secured, our dedicated visa experts take charge of your final visa preparation, financial documentation, mock interviews, housing setup, and pre-departure briefings.
@@ -218,13 +215,10 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
         </div>
       </section>
 
-      {/* 5. COMPLETE 3C JOURNEY TIMELINE */}
-      <section className="section-padding" style={{ backgroundColor: '#EAF2E2' }}>
+      {/* 5. COMPLETE 3C JOURNEY TIMELINE on Light Blue (#F4F7FB) */}
+      <section className="section-padding" style={{ backgroundColor: '#F4F7FB' }}>
         <div className="container">
           <div className="section-header">
-            <span className="section-tag">
-              <Compass size={14} /> Connected Pathway
-            </span>
             <h2 className="section-title">The Complete 3C Journey</h2>
             <p className="section-subtitle">
               From your initial profile evaluation to boarding your flight, see how our 3C Model connects as one complete journey.
@@ -258,8 +252,8 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
         </div>
       </section>
 
-      {/* 6. WHAT STUDENTS GET */}
-      <section className="section-padding" style={{ backgroundColor: '#F3E8DA' }}>
+      {/* 6. WHAT STUDENTS GET on Light Blue (#F4F7FB) */}
+      <section className="section-padding" style={{ backgroundColor: '#F4F7FB', paddingBottom: 0 }}>
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">What Students Get with the 3C Model</h2>
@@ -279,15 +273,20 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
             ))}
           </div>
         </div>
+
+        {/* Seamless Color Blend from Light Blue (#F4F7FB) into Soft Blush Pink (#F8E4E1) before Success Outcomes */}
+        <div style={{
+          width: '100%',
+          height: '140px',
+          background: 'linear-gradient(180deg, #F4F7FB 0%, #F8E4E1 100%)',
+          marginTop: '3.5rem'
+        }} />
       </section>
 
-      {/* 7. SUCCESS OUTCOMES */}
+      {/* 7. SUCCESS OUTCOMES on Soft Blush Pink (#F8E4E1) */}
       <section className="section-padding" style={{ backgroundColor: '#F8E4E1' }}>
         <div className="container">
           <div className="section-header">
-            <span className="section-tag">
-              <Award size={14} /> Tangible Results
-            </span>
             <h2 className="section-title">Success Outcomes You Will Achieve</h2>
             <p className="section-subtitle">
               The 3C Model is outcome-driven. Here are the clear results we help every student achieve.
@@ -306,8 +305,8 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
         </div>
       </section>
 
-      {/* 8. WHY OUR 3C MODEL */}
-      <section className="section-padding" style={{ backgroundColor: '#FFFFFF' }}>
+      {/* 8. WHY OUR 3C MODEL on Soft Blush Pink (#F8E4E1) */}
+      <section className="section-padding" style={{ backgroundColor: '#F8E4E1' }}>
         <div className="container" style={{ maxWidth: '900px' }}>
           <div className="section-header">
             <h2 className="section-title">Why Our 3C Model Stands Out</h2>
@@ -318,7 +317,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
 
           <div className="grid-2" style={{ gap: '1.25rem' }}>
             {whyUsPoints.map((point, idx) => (
-              <div key={idx} style={{ background: '#F8FAFC', padding: '1.1rem 1.25rem', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <div key={idx} style={{ background: '#FFFFFF', padding: '1.1rem 1.25rem', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '0.75rem', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}>
                 <CheckCircle2 size={18} color="#F58220" />
                 <span style={{ fontSize: '0.95rem', fontWeight: 700, color: '#0B1930' }}>{point}</span>
               </div>
