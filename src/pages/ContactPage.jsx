@@ -2,15 +2,14 @@ import React from 'react';
 import Hero from '../components/Hero';
 import ContactSection from '../components/ContactSection';
 import LeadFormSection from '../components/LeadFormSection';
-import { MapPin } from 'lucide-react';
 
 export default function ContactPage({ onOpenCounselling }) {
   return (
     <div className="contact-page">
       {/* Reusable Hero Banner with Home Page Design */}
       <Hero
-        badgeTag="Get In Touch"
-        badgeIcon={MapPin}
+        badgeTag=""
+        badgeIcon={null}
         titlePrefix="Contact "
         titleHighlight="Visakhapatnam Centre"
         titleSuffix=""

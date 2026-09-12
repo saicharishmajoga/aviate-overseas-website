@@ -2,15 +2,14 @@ import React from 'react';
 import Hero from '../components/Hero';
 import AboutSection from '../components/AboutSection';
 import LeadFormSection from '../components/LeadFormSection';
-import { Heart } from 'lucide-react';
 
 export default function AboutPage({ onOpenCounselling }) {
   return (
     <div className="about-page">
       {/* Reusable Hero Banner with Home Page Design */}
       <Hero
-        badgeTag="Our Legacy & Values"
-        badgeIcon={Heart}
+        badgeTag=""
+        badgeIcon={null}
         titlePrefix="About Aviate "
         titleHighlight="Overseas Education"
         titleSuffix=""

@@ -4,7 +4,7 @@ import { COMPANY_INFO } from '../data/consultancyData';
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="section-padding" style={{ backgroundColor: '#F8E4E1' }}>
+    <section id="contact" className="section-padding" style={{ backgroundColor: '#F4F7FB', paddingBottom: 0 }}>
       <div className="container">
 
         {/* Section Header */}
@@ -29,10 +29,11 @@ export default function ContactSection() {
             
             {/* Phone Card */}
             <div style={{
-              background: '#F8FAFC',
+              background: '#FFFFFF',
               borderRadius: '16px',
               padding: '1.5rem',
               border: '1px solid #E2E8F0',
+              boxShadow: '0 4px 12px rgba(11, 25, 48, 0.03)',
               display: 'flex',
               alignItems: 'flex-start',
               gap: '1.25rem'
@@ -59,6 +60,7 @@ export default function ContactSection() {
               borderRadius: '16px',
               padding: '1.5rem',
               border: '1px solid #BBF7D0',
+              boxShadow: '0 4px 12px rgba(16, 185, 129, 0.06)',
               display: 'flex',
               alignItems: 'flex-start',
               gap: '1.25rem'
@@ -86,10 +88,11 @@ export default function ContactSection() {
 
             {/* Email Card */}
             <div style={{
-              background: '#F8FAFC',
+              background: '#FFFFFF',
               borderRadius: '16px',
               padding: '1.5rem',
               border: '1px solid #E2E8F0',
+              boxShadow: '0 4px 12px rgba(11, 25, 48, 0.03)',
               display: 'flex',
               alignItems: 'flex-start',
               gap: '1.25rem'
@@ -112,10 +115,11 @@ export default function ContactSection() {
 
             {/* Address Card */}
             <div style={{
-              background: '#F8FAFC',
+              background: '#FFFFFF',
               borderRadius: '16px',
               padding: '1.5rem',
               border: '1px solid #E2E8F0',
+              boxShadow: '0 4px 12px rgba(11, 25, 48, 0.03)',
               display: 'flex',
               alignItems: 'flex-start',
               gap: '1.25rem'
@@ -174,6 +178,14 @@ export default function ContactSection() {
         </div>
 
       </div>
+
+      {/* Seamless Color Blend from Light Blue (#F4F7FB) into Soft Blush Pink (#F8E4E1) */}
+      <div style={{
+        width: '100%',
+        height: '140px',
+        background: 'linear-gradient(180deg, #F4F7FB 0%, #F8E4E1 100%)',
+        marginTop: '3.5rem'
+      }} />
 
       <style>{`
         @media (max-width: 992px) {

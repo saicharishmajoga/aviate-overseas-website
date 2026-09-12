@@ -1,10 +1,10 @@
 import React from 'react';
-import { Target, Compass, Heart, Eye, TrendingUp, Award, CheckCircle2 } from 'lucide-react';
-import { COMPANY_INFO, CORE_VALUES } from '../data/consultancyData';
+import { Target, Compass } from 'lucide-react';
+import { COMPANY_INFO } from '../data/consultancyData';
 
 export default function AboutSection({ onOpenCounselling }) {
   return (
-    <section id="about-us" className="section-padding" style={{ backgroundColor: '#F8E4E1' }}>
+    <section id="about-us" className="section-padding" style={{ backgroundColor: '#F4F7FB', paddingBottom: 0 }}>
       <div className="container">
         
         <div style={{
@@ -98,6 +98,14 @@ export default function AboutSection({ onOpenCounselling }) {
         </div>
 
       </div>
+
+      {/* Seamless Color Blend from Light Blue (#F4F7FB) into Soft Blush Pink (#F8E4E1) */}
+      <div style={{
+        width: '100%',
+        height: '140px',
+        background: 'linear-gradient(180deg, #F4F7FB 0%, #F8E4E1 100%)',
+        marginTop: '3.5rem'
+      }} />
 
       <style>{`
         @media (max-width: 992px) {
