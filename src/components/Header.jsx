@@ -124,56 +124,8 @@ export default function Header({ onOpenCounselling }) {
             })}
           </nav>
 
-          {/* Eduo-Style Pill CTA Buttons */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
-            
-            {/* WhatsApp Pill */}
-            <a
-              href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=Hi%20Aviate,%20I%20want%20to%20know%20about%20study%20abroad%20programs`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-whatsapp header-wa-btn"
-              style={{
-                borderRadius: '9999px',
-                padding: '0.5rem 0.85rem',
-                fontSize: '0.85rem'
-              }}
-              title="Chat on WhatsApp"
-            >
-              <MessageSquare size={16} />
-              <span className="hide-mobile">WhatsApp</span>
-            </a>
-
-            {/* Eduo Rounded Pill Free Counselling Button */}
-            <Link
-              to="/free-counselling"
-              className="btn header-counselling-btn"
-              style={{
-                backgroundColor: '#FFFFFF',
-                color: '#0B1930',
-                borderRadius: '9999px',
-                padding: '0.55rem 1.1rem',
-                fontSize: '0.85rem',
-                fontWeight: 700,
-                boxShadow: '0 4px 15px rgba(255, 255, 255, 0.2)',
-                transition: 'all 0.3s ease',
-                textDecoration: 'none',
-                display: 'inline-flex',
-                alignItems: 'center'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#F58220';
-                e.currentTarget.style.color = '#FFFFFF';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#FFFFFF';
-                e.currentTarget.style.color = '#0B1930';
-              }}
-            >
-              Free Counselling
-            </Link>
-
-            {/* Mobile Hamburger Toggle */}
+          {/* Mobile Hamburger Toggle */}
+          <div style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               style={{
@@ -234,25 +186,6 @@ export default function Header({ onOpenCounselling }) {
                 </Link>
               );
             })}
-            <div style={{ marginTop: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <Link
-                to="/free-counselling"
-                onClick={() => setMobileMenuOpen(false)}
-                className="btn btn-orange"
-                style={{ width: '100%', borderRadius: '9999px', padding: '0.85rem 1.25rem', fontSize: '0.95rem', textAlign: 'center', textDecoration: 'none' }}
-              >
-                Book Free Counselling
-              </Link>
-              <a
-                href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=Hi%20Aviate,%20I%20want%20to%20know%20about%20study%20abroad%20programs`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-whatsapp"
-                style={{ width: '100%', borderRadius: '9999px', padding: '0.85rem 1.25rem', fontSize: '0.95rem' }}
-              >
-                <MessageSquare size={18} /> Chat on WhatsApp
-              </a>
-            </div>
           </div>
         </div>
       )}
@@ -264,13 +197,6 @@ export default function Header({ onOpenCounselling }) {
           .hide-mobile { display: none !important; }
         }
         @media (max-width: 576px) {
-          .header-counselling-btn {
-            padding: 0.5rem 0.75rem !important;
-            font-size: 0.78rem !important;
-          }
-          .header-wa-btn {
-            padding: 0.5rem !important;
-          }
           .top-info-bar {
             font-size: 0.75rem !important;
           }
