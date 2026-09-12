@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Hero from '../components/Hero';
-import { Award } from 'lucide-react';
 import LeadFormSection from '../components/LeadFormSection';
 import { SUCCESS_STORIES_DATA } from '../data/consultancyData';
 
@@ -15,20 +14,20 @@ export default function SuccessStoriesPage({ onOpenCounselling }) {
     <div className="success-stories-page">
       {/* Reusable Hero Banner with Home Page Design */}
       <Hero
-        badgeTag="Student Achievements"
-        badgeIcon={Award}
+        badgeTag=""
+        badgeIcon={null}
         titlePrefix="Success Stories That "
         titleHighlight="Inspire Us"
         titleSuffix=""
         subtitle="Every student's journey is different. Here's how we've helped students turn their overseas education goals into reality."
-        imageSrc="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1000&q=80"
-        imageAlt="Happy Graduated Overseas Students"
-        bottomCurveColor="#F3E8DA"
+        imageSrc="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80"
+        imageAlt="Happy Graduated Overseas Students with Aviate"
+        bottomCurveColor="#F4F7FB"
         onOpenCounselling={onOpenCounselling}
       />
 
-      {/* Main Success Stories Section */}
-      <section className="section-padding" style={{ backgroundColor: '#F3E8DA' }}>
+      {/* Main Success Stories Section on Light Blue (#F4F7FB) */}
+      <section className="section-padding" style={{ backgroundColor: '#F4F7FB', paddingBottom: 0 }}>
         <div className="container">
           
           {/* Quick Filter Buttons */}
@@ -117,6 +116,14 @@ export default function SuccessStoriesPage({ onOpenCounselling }) {
           </div>
 
         </div>
+
+        {/* Seamless Color Blend from Light Blue (#F4F7FB) into Soft Blush Pink (#F8E4E1) */}
+        <div style={{
+          width: '100%',
+          height: '140px',
+          background: 'linear-gradient(180deg, #F4F7FB 0%, #F8E4E1 100%)',
+          marginTop: '3.5rem'
+        }} />
 
         <style>{`
           .story-card:hover {

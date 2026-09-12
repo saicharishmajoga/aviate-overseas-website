@@ -28,7 +28,7 @@ export default function Header({ onOpenCounselling }) {
     { name: 'Universities', path: '/universities' },
     { name: 'Why Choose Us', path: '/why-choose-us' },
     { name: '3C Model', path: '/3c-model' },
-    { name: 'OUR Success Stories', path: '/our-success-stories' },
+    { name: 'Our Success Stories', path: '/our-success-stories' },
     { name: 'Free Counselling', path: '/free-counselling' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' }

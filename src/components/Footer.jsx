@@ -122,7 +122,7 @@ export default function Footer() {
                 <li><Link to="/free-counselling">Free Counselling</Link></li>
                 <li><Link to="/3c-model">Aviate 3C Model</Link></li>
                 <li><Link to="/why-choose-us">Why Choose Us</Link></li>
-                <li><Link to="/our-success-stories">OUR Success Stories</Link></li>
+                <li><Link to="/our-success-stories">Our Success Stories</Link></li>
                 <li><Link to="/universities">Partner Universities</Link></li>
                 <li><Link to="/contact">Contact Visakhapatnam</Link></li>
               </ul>

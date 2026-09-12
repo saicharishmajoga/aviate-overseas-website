@@ -66,9 +66,6 @@ export default function LeadFormSection() {
 
             {/* Left Content */}
             <div>
-              <span className="section-tag section-tag-navy" style={{ marginBottom: '1rem' }}>
-                <Sparkles size={15} /> 100% Free Advisory Session
-              </span>
               <h2 style={{ fontSize: '2.5rem', color: '#FFFFFF', fontWeight: 800, lineHeight: 1.2, marginBottom: '1.25rem' }}>
                 Ready to Start Your Study Abroad Journey?
               </h2>
