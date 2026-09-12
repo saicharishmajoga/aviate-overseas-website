@@ -7,13 +7,8 @@ import {
   CheckCircle2,
   Send,
   MessageSquare,
-  Sparkles,
   PhoneCall,
-  ArrowRight,
-  Clock,
-  UserCheck,
-  FileText,
-  Compass
+  ArrowRight
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/consultancyData';
 
@@ -109,8 +104,8 @@ export default function FreeCounsellingPage() {
     <div className="free-counselling-page">
       {/* 1. HERO SECTION */}
       <Hero
-        badgeTag="100% Free Advisory Session"
-        badgeIcon={Sparkles}
+        badgeTag=""
+        badgeIcon={null}
         titlePrefix="Start Your Overseas Education Journey With "
         titleHighlight="Free Expert Guidance"
         titleSuffix=""
@@ -121,13 +116,10 @@ export default function FreeCounsellingPage() {
         onOpenCounselling={scrollToForm}
       />
 
-      {/* 2. SERVICES INCLUDED SECTION */}
+      {/* 2. SERVICES INCLUDED SECTION on Light Blue (#F4F7FB) */}
       <section className="section-padding" style={{ backgroundColor: '#F4F7FB' }}>
         <div className="container">
           <div className="section-header">
-            <span className="section-tag">
-              <Sparkles size={14} /> Comprehensive Support
-            </span>
             <h2 className="section-title">
               What You Get With Our Free Counselling
             </h2>
@@ -216,13 +208,10 @@ export default function FreeCounsellingPage() {
         `}</style>
       </section>
 
-      {/* 3. HOW OUR FREE COUNSELLING WORKS */}
-      <section className="section-padding" style={{ backgroundColor: '#FAF9F6' }}>
+      {/* 3. HOW OUR FREE COUNSELLING WORKS on Light Blue (#F4F7FB) */}
+      <section className="section-padding" style={{ backgroundColor: '#F4F7FB', paddingBottom: 0 }}>
         <div className="container">
           <div className="section-header">
-            <span className="section-tag">
-              <Compass size={14} /> Simple Process
-            </span>
             <h2 className="section-title">
               How It Works
             </h2>
@@ -269,9 +258,17 @@ export default function FreeCounsellingPage() {
             ))}
           </div>
         </div>
+
+        {/* Seamless Color Blend from Light Blue (#F4F7FB) into Soft Blush Pink (#F8E4E1) before Counselling Form */}
+        <div style={{
+          width: '100%',
+          height: '140px',
+          background: 'linear-gradient(180deg, #F4F7FB 0%, #F8E4E1 100%)',
+          marginTop: '3.5rem'
+        }} />
       </section>
 
-      {/* 4. COUNSELLING FORM SECTION */}
+      {/* 4. COUNSELLING FORM SECTION on Soft Blush Pink (#F8E4E1) */}
       <section id="counselling-form" className="section-padding" style={{ backgroundColor: '#F8E4E1' }}>
         <div className="container">
           <div style={{
@@ -300,9 +297,6 @@ export default function FreeCounsellingPage() {
 
               {/* Left Content Column */}
               <div>
-                <span className="section-tag section-tag-navy" style={{ marginBottom: '1rem' }}>
-                  <Sparkles size={15} /> 1-on-1 Personalized Session
-                </span>
                 <h2 style={{ fontSize: '2.5rem', color: '#FFFFFF', fontWeight: 800, lineHeight: 1.2, marginBottom: '1.25rem' }}>
                   Book Your Free Counselling Session
                 </h2>
@@ -577,28 +571,29 @@ export default function FreeCounsellingPage() {
         </div>
       </section>
 
-      {/* 5. DEDICATED WHATSAPP CTA SECTION */}
-      <section className="section-padding" style={{ backgroundColor: '#061021', color: '#FFFFFF', textAlign: 'center' }}>
+      {/* 5. DEDICATED WHATSAPP CTA SECTION (Clean Light / Pink Shade background, blue background removed) */}
+      <section className="section-padding" style={{ backgroundColor: '#F8E4E1', color: '#0B1930', textAlign: 'center', paddingTop: '2rem' }}>
         <div className="container" style={{ maxWidth: '800px' }}>
           <div style={{
             width: '64px',
             height: '64px',
             borderRadius: '50%',
-            backgroundColor: 'rgba(37, 211, 102, 0.15)',
-            color: '#25D366',
+            backgroundColor: '#DCFCE7',
+            color: '#16A34A',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            margin: '0 auto 1.5rem auto'
+            margin: '0 auto 1.5rem auto',
+            boxShadow: '0 8px 20px rgba(22, 163, 74, 0.15)'
           }}>
             <MessageSquare size={32} />
           </div>
 
-          <h2 style={{ fontSize: '2.25rem', color: '#FFFFFF', fontWeight: 800, marginBottom: '1rem' }}>
+          <h2 style={{ fontSize: '2.25rem', color: '#0B1930', fontWeight: 800, marginBottom: '1rem' }}>
             Have Questions? Talk to Us on WhatsApp
           </h2>
 
-          <p style={{ color: '#CBD5E1', fontSize: '1.1rem', lineHeight: 1.65, marginBottom: '2rem' }}>
+          <p style={{ color: '#475569', fontSize: '1.1rem', lineHeight: 1.65, marginBottom: '2rem' }}>
             Get quick answers from our counselling team and learn more about your overseas education options.
           </p>
 
