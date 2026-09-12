@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, ArrowRight, CheckCircle2, Award, Target, BookOpen, Building2, ShieldCheck, Compass, PlaneTakeoff, Heart, FileCheck } from 'lucide-react';
+import Hero from '../components/Hero';
+import { Sparkles, ArrowRight, CheckCircle2, Award, Target, Building2, ShieldCheck, Compass } from 'lucide-react';
 import LeadFormSection from '../components/LeadFormSection';
 import { AVIATE_3C_MODEL } from '../data/consultancyData';
 
@@ -64,27 +65,30 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
 
   return (
     <div className="three-c-model-page">
-      {/* 1. HERO / OVERVIEW HEADER */}
-      <section style={{ backgroundColor: '#0B1930', color: '#FFFFFF', padding: '4rem 0 3.5rem 0', position: 'relative', overflow: 'hidden' }}>
-        <div className="container" style={{ textAlign: 'center', maxWidth: '850px' }}>
-          <span className="section-tag section-tag-navy" style={{ marginBottom: '1rem' }}>
-            <Sparkles size={16} /> Proprietary Methodology
-          </span>
-          <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)', fontWeight: 800, color: '#FFFFFF', marginBottom: '1rem' }}>
-            The Aviate 3C Model
-          </h1>
-          <p style={{ color: '#CBD5E1', fontSize: '1.1rem', lineHeight: 1.65, marginBottom: '2rem' }}>
-            Choosing the right overseas education path shouldn't be complicated. Our 3C Model simplifies your international journey into three seamless, connected pillars: <strong>Right Course (C1)</strong>, <strong>Right College (C2)</strong>, and <strong>Right Country / Visa Completion (C3)</strong>.
-          </p>
+      {/* Reusable Hero Banner with Home Page Design */}
+      <Hero
+        badgeTag="Proprietary Methodology"
+        badgeIcon={Sparkles}
+        titlePrefix="The Aviate "
+        titleHighlight="3C Model"
+        titleSuffix=""
+        subtitle="Choosing the right overseas education path shouldn't be complicated. Our 3C Model simplifies your international journey into three seamless, connected pillars: Right Course (C1), Right College (C2), and Right Country / Visa Completion (C3)."
+        imageSrc="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1000&q=80"
+        imageAlt="Structured Study Planning"
+        bottomCurveColor="#F4F7FB"
+        onOpenCounselling={onOpenCounselling}
+      />
 
-          {/* Quick Summary Cards */}
+      {/* 3C Overview Pillars Summary */}
+      <section style={{ backgroundColor: '#F4F7FB', paddingTop: '1rem', paddingBottom: '2.5rem' }}>
+        <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem', textAlign: 'left' }} className="grid-3">
             {AVIATE_3C_MODEL.pillars.map((p) => (
-              <div key={p.code} style={{ background: 'rgba(255, 255, 255, 0.08)', borderRadius: '16px', padding: '1.5rem', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
-                <span className="badge" style={{ backgroundColor: '#F58220', color: '#FFFFFF', marginBottom: '0.75rem' }}>{p.code}</span>
-                <h3 style={{ fontSize: '1.25rem', color: '#FFFFFF', fontWeight: 700, marginBottom: '0.2rem' }}>{p.name}</h3>
-                <div style={{ fontSize: '0.8rem', color: '#F58220', fontWeight: 600, textTransform: 'uppercase', marginBottom: '0.5rem' }}>{p.subtitle}</div>
-                <p style={{ color: '#94A3B8', fontSize: '0.875rem', lineHeight: 1.5 }}>{p.description}</p>
+              <div key={p.code} style={{ background: '#FFFFFF', borderRadius: '18px', padding: '1.75rem', border: '1px solid #E2E8F0', boxShadow: '0 10px 25px rgba(11,25,48,0.04)' }}>
+                <span className="badge" style={{ backgroundColor: '#F58220', color: '#FFFFFF', marginBottom: '0.75rem', fontSize: '0.85rem' }}>{p.code}</span>
+                <h3 style={{ fontSize: '1.25rem', color: '#0B1930', fontWeight: 800, marginBottom: '0.2rem' }}>{p.name}</h3>
+                <div style={{ fontSize: '0.8rem', color: '#F58220', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.5rem' }}>{p.subtitle}</div>
+                <p style={{ color: '#475569', fontSize: '0.875rem', lineHeight: 1.5 }}>{p.description}</p>
               </div>
             ))}
           </div>
@@ -92,7 +96,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
       </section>
 
       {/* 2. C1 — COUNSELLING */}
-      <section className="section-padding" style={{ backgroundColor: '#F4F7FB' }}>
+      <section className="section-padding" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: '3.5rem', alignItems: 'center' }} className="grid-2">
             <div>
@@ -108,7 +112,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
                   </div>
                 ))}
               </div>
-              <div style={{ background: '#FFFFFF', padding: '1.25rem', borderRadius: '12px', border: '1px solid #CBD5E1', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
+              <div style={{ background: '#F8FAFC', padding: '1.25rem', borderRadius: '12px', border: '1px solid #CBD5E1', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
                 <strong style={{ color: '#F58220', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.05em' }}>Key Outcomes of C1:</strong>
                 <p style={{ color: '#0B1930', fontSize: '0.95rem', fontWeight: 700, marginTop: '0.3rem' }}>
                   Clear career direction identified • Optimal course match selected • Suitable country framework determined • Personalized 1-on-1 study roadmap created.

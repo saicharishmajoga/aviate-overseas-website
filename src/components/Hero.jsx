@@ -1,8 +1,19 @@
 import React from 'react';
-import { ArrowRight, MessageSquare, ShieldCheck, Award, Sparkles, PhoneCall, Globe, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, MessageSquare, PhoneCall, CheckCircle2, Sparkles } from 'lucide-react';
 import { COMPANY_INFO } from '../data/consultancyData';
 
-export default function Hero({ onOpenCounselling }) {
+export default function Hero({
+  badgeTag = "100% Transparent Overseas Education Consultancy",
+  badgeIcon: BadgeIcon = Sparkles,
+  titlePrefix = "We Are Bringing ",
+  titleHighlight = "Overseas Education",
+  titleSuffix = " Within Everyone's Reach",
+  subtitle = COMPANY_INFO.heroSubtitle,
+  imageSrc = "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80",
+  imageAlt = "International Students Studying Abroad with Aviate",
+  bottomCurveColor = "#F4F7FB",
+  onOpenCounselling
+}) {
   return (
     <section id="hero" style={{
       position: 'relative',
@@ -64,6 +75,13 @@ export default function Hero({ onOpenCounselling }) {
 
           {/* Left Column: Copy & Actions */}
           <div>
+            {/* Optional Top Tag Badge */}
+            {badgeTag && (
+              <span className="section-tag section-tag-navy" style={{ marginBottom: '1.25rem', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+                {BadgeIcon && <BadgeIcon size={16} />} {badgeTag}
+              </span>
+            )}
+
             {/* Main Headline */}
             <h1 style={{
               fontSize: '3.15rem',
@@ -73,11 +91,17 @@ export default function Hero({ onOpenCounselling }) {
               letterSpacing: '-0.03em',
               marginBottom: '1.25rem'
             }} className="hero-title">
-              We Are Bringing <span style={{
-                background: 'linear-gradient(135deg, #FF8C2B, #F58220)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-              }}>Overseas Education</span> Within Everyone's Reach
+              {titlePrefix}
+              {titleHighlight && (
+                <span style={{
+                  background: 'linear-gradient(135deg, #FF8C2B, #F58220)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent'
+                }}>
+                  {titleHighlight}
+                </span>
+              )}
+              {titleSuffix}
             </h1>
 
             {/* Supporting Paragraph */}
@@ -88,20 +112,20 @@ export default function Hero({ onOpenCounselling }) {
               marginBottom: '2rem',
               maxWidth: '620px'
             }}>
-              {COMPANY_INFO.heroSubtitle}
+              {subtitle}
             </p>
 
             {/* CTAs Group */}
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }} className="hero-ctas">
               <button
-                onClick={() => onOpenCounselling()}
+                onClick={() => onOpenCounselling && onOpenCounselling()}
                 className="btn btn-orange btn-lg"
               >
                 Start Your Journey <ArrowRight size={18} />
               </button>
 
               <button
-                onClick={() => onOpenCounselling()}
+                onClick={() => onOpenCounselling && onOpenCounselling()}
                 className="btn btn-outline-white btn-lg"
               >
                 <PhoneCall size={18} /> Talk to a Counsellor
@@ -162,8 +186,8 @@ export default function Hero({ onOpenCounselling }) {
               border: '4px solid rgba(255, 255, 255, 0.12)'
             }} className="hero-img-box">
               <img
-                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80"
-                alt="International Students Studying Abroad with Aviate"
+                src={imageSrc}
+                alt={imageAlt}
                 style={{
                   width: '100%',
                   height: '100%',
@@ -185,7 +209,7 @@ export default function Hero({ onOpenCounselling }) {
         </div>
       </div>
 
-      {/* Broad, Smooth Bottom Curve (Right Side Reaching Student Photo Box) */}
+      {/* Broad, Smooth Bottom Curve */}
       <div style={{
         position: 'absolute',
         bottom: '-2px',
@@ -206,7 +230,7 @@ export default function Hero({ onOpenCounselling }) {
         >
           <path
             d="M0,110 C160,110 280,55 400,55 C550,55 650,140 750,140 C900,140 1080,25 1440,20 L1440,260 L0,260 Z"
-            fill="#F4F7FB"
+            fill={bottomCurveColor}
           />
         </svg>
       </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Sparkles, Quote, Award, CheckCircle2, ShieldCheck, ArrowRight, Filter } from 'lucide-react';
+import Hero from '../components/Hero';
+import { Award } from 'lucide-react';
 import LeadFormSection from '../components/LeadFormSection';
 import { SUCCESS_STORIES_DATA } from '../data/consultancyData';
 
@@ -12,20 +13,19 @@ export default function SuccessStoriesPage({ onOpenCounselling }) {
 
   return (
     <div className="success-stories-page">
-      {/* Hero Header */}
-      <section style={{ backgroundColor: '#0B1930', color: '#FFFFFF', padding: '4rem 0 3.5rem 0', position: 'relative', overflow: 'hidden' }}>
-        <div className="container" style={{ textAlign: 'center', maxWidth: '850px' }}>
-          <span className="section-tag section-tag-navy" style={{ marginBottom: '1rem' }}>
-            <Award size={16} /> Student Achievements
-          </span>
-          <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)', fontWeight: 800, color: '#FFFFFF', marginBottom: '1rem' }}>
-            Success Stories That Inspire Us
-          </h1>
-          <p style={{ color: '#CBD5E1', fontSize: '1.1rem', lineHeight: 1.65 }}>
-            Every student's journey is different. Here's how we've helped students turn their overseas education goals into reality.
-          </p>
-        </div>
-      </section>
+      {/* Reusable Hero Banner with Home Page Design */}
+      <Hero
+        badgeTag="Student Achievements"
+        badgeIcon={Award}
+        titlePrefix="Success Stories That "
+        titleHighlight="Inspire Us"
+        titleSuffix=""
+        subtitle="Every student's journey is different. Here's how we've helped students turn their overseas education goals into reality."
+        imageSrc="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1000&q=80"
+        imageAlt="Happy Graduated Overseas Students"
+        bottomCurveColor="#F3E8DA"
+        onOpenCounselling={onOpenCounselling}
+      />
 
       {/* Main Success Stories Section */}
       <section className="section-padding" style={{ backgroundColor: '#F3E8DA' }}>

@@ -1,25 +1,25 @@
 import React from 'react';
+import Hero from '../components/Hero';
 import ProgramsSection from '../components/ProgramsSection';
 import LeadFormSection from '../components/LeadFormSection';
-import { Sparkles, GraduationCap, CheckCircle2 } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
 
 export default function ProgramsPage({ onOpenCounselling, onSelectCountry }) {
   return (
     <div className="programs-page">
-      {/* Page Hero Banner */}
-      <section style={{ backgroundColor: '#0B1930', color: '#FFFFFF', padding: '4rem 0 3rem 0', position: 'relative', overflow: 'hidden' }}>
-        <div className="container" style={{ textAlign: 'center', maxWidth: '850px' }}>
-          <span className="section-tag section-tag-navy" style={{ marginBottom: '1rem' }}>
-            <GraduationCap size={16} /> International Academic Pathways
-          </span>
-          <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)', fontWeight: 800, color: '#FFFFFF', marginBottom: '1rem' }}>
-            Study Programs & Degrees Abroad
-          </h1>
-          <p style={{ color: '#CBD5E1', fontSize: '1.1rem', lineHeight: 1.65 }}>
-            Explore world-class academic degree paths curated for high global career employability, tuition scholarship opportunities, and post-study work rights.
-          </p>
-        </div>
-      </section>
+      {/* Reusable Hero Banner with Home Page Design */}
+      <Hero
+        badgeTag="International Academic Pathways"
+        badgeIcon={GraduationCap}
+        titlePrefix="Study Programs & "
+        titleHighlight="Degrees Abroad"
+        titleSuffix=""
+        subtitle="Explore world-class academic degree paths curated for high global career employability, tuition scholarship opportunities, and post-study work rights."
+        imageSrc="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1000&q=80"
+        imageAlt="Students Graduating & Studying Abroad"
+        bottomCurveColor="#F4F7FB"
+        onOpenCounselling={onOpenCounselling}
+      />
 
       {/* Main Programs Component */}
       <ProgramsSection
