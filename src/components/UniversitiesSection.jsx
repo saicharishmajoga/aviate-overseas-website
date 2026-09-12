@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Building2, Search, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { PARTNER_UNIVERSITIES } from '../data/consultancyData';
 
-export default function UniversitiesSection({ onOpenCounselling }) {
+export default function UniversitiesSection({ onOpenCounselling, bottomBlendColor = '#F3E8DA' }) {
   const [filterText, setFilterText] = useState('');
   const [activeUniIdx, setActiveUniIdx] = useState(null);
 
@@ -128,11 +128,11 @@ export default function UniversitiesSection({ onOpenCounselling }) {
 
       </div>
 
-      {/* Seamless Color Blend into Testimonials section */}
+      {/* Seamless Color Blend */}
       <div style={{
         width: '100%',
-        height: '110px',
-        background: 'linear-gradient(180deg, #EAF2E2 0%, #F3E8DA 100%)',
+        height: '140px',
+        background: `linear-gradient(180deg, #EAF2E2 0%, #F3E8DA 45%, ${bottomBlendColor} 100%)`,
         marginTop: '3.5rem'
       }} />
 

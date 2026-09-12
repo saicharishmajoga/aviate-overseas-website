@@ -3,15 +3,14 @@ import Hero from '../components/Hero';
 import DestinationsSection from '../components/DestinationsSection';
 import CostCalculator from '../components/CostCalculator';
 import LeadFormSection from '../components/LeadFormSection';
-import { Globe } from 'lucide-react';
 
 export default function CountriesPage({ onSelectCountry, onOpenCounselling }) {
   return (
     <div className="countries-page">
       {/* Reusable Hero Banner with Home Page Design */}
       <Hero
-        badgeTag="Global Education Destinations"
-        badgeIcon={Globe}
+        badgeTag=""
+        badgeIcon={null}
         titlePrefix="Explore Top "
         titleHighlight="Study Abroad Countries"
         titleSuffix=""
@@ -28,8 +27,11 @@ export default function CountriesPage({ onSelectCountry, onOpenCounselling }) {
         onOpenCounselling={onOpenCounselling}
       />
 
-      {/* Budget & Cost Calculator */}
-      <CostCalculator onOpenCounselling={onOpenCounselling} />
+      {/* Budget & Cost Calculator with Smooth Color Blend into LeadFormSection (#F8E4E1) */}
+      <CostCalculator
+        onOpenCounselling={onOpenCounselling}
+        bottomBlendColor="#F8E4E1"
+      />
 
       {/* Lead Form */}
       <LeadFormSection />

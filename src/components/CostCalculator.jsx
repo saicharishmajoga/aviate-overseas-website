@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Calculator, DollarSign, Clock, Award, ShieldCheck, ArrowRight } from 'lucide-react';
 import { DESTINATIONS_DATA } from '../data/consultancyData';
 
-export default function CostCalculator({ onOpenCounselling }) {
+export default function CostCalculator({ onOpenCounselling, bottomBlendColor = '#EAF2E2' }) {
   const [selectedDegree, setSelectedDegree] = useState('MBBS');
   const [selectedCountry, setSelectedCountry] = useState('Timor Leste');
 
@@ -159,11 +159,11 @@ export default function CostCalculator({ onOpenCounselling }) {
 
       </div>
 
-      {/* Seamless Color Blend into UniversitiesSection */}
+      {/* Seamless Color Blend */}
       <div style={{
         width: '100%',
-        height: '110px',
-        background: 'linear-gradient(180deg, #F7FAF5 0%, #EAF2E2 100%)',
+        height: '140px',
+        background: `linear-gradient(180deg, #F7FAF5 0%, #EAF2E2 45%, ${bottomBlendColor} 100%)`,
         marginTop: '3.5rem'
       }} />
 
