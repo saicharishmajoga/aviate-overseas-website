@@ -2,15 +2,14 @@ import React from 'react';
 import Hero from '../components/Hero';
 import ProgramsSection from '../components/ProgramsSection';
 import LeadFormSection from '../components/LeadFormSection';
-import { GraduationCap } from 'lucide-react';
 
 export default function ProgramsPage({ onOpenCounselling, onSelectCountry }) {
   return (
     <div className="programs-page">
       {/* Reusable Hero Banner with Home Page Design */}
       <Hero
-        badgeTag="International Academic Pathways"
-        badgeIcon={GraduationCap}
+        badgeTag=""
+        badgeIcon={null}
         titlePrefix="Study Programs & "
         titleHighlight="Degrees Abroad"
         titleSuffix=""
@@ -21,10 +20,11 @@ export default function ProgramsPage({ onOpenCounselling, onSelectCountry }) {
         onOpenCounselling={onOpenCounselling}
       />
 
-      {/* Main Programs Component */}
+      {/* Main Programs Component with Smooth Color Blending into LeadFormSection (#F8E4E1) */}
       <ProgramsSection
         onOpenCounselling={onOpenCounselling}
         onSelectCountry={(countryName) => onOpenCounselling('', countryName)}
+        bottomBlendColor="#F8E4E1"
       />
 
       {/* Counselling Lead Form */}

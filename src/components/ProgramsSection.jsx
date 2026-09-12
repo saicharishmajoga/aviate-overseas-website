@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { GraduationCap, ArrowRight, CheckCircle, Sparkles, DollarSign, Building, Globe } from 'lucide-react';
 import { PROGRAMS_DATA } from '../data/consultancyData';
 
-export default function ProgramsSection({ onOpenCounselling, onSelectCountry }) {
+export default function ProgramsSection({ onOpenCounselling, onSelectCountry, bottomBlendColor = '#F7EEDC' }) {
   const [activeTab, setActiveTab] = useState('all');
 
   const filteredPrograms = activeTab === 'all'
@@ -225,11 +225,11 @@ export default function ProgramsSection({ onOpenCounselling, onSelectCountry }) 
 
       </div>
 
-      {/* Seamless Color Blend into Why Choose Us section */}
+      {/* Seamless Color Blend into Next Section */}
       <div style={{
         width: '100%',
-        height: '110px',
-        background: 'linear-gradient(180deg, #F4F7FB 0%, #F7EEDC 100%)',
+        height: '140px',
+        background: `linear-gradient(180deg, #F4F7FB 0%, #F7EEDC 45%, ${bottomBlendColor} 100%)`,
         marginTop: '3.5rem'
       }} />
 
