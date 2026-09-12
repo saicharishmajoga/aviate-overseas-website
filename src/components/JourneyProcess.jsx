@@ -4,7 +4,7 @@ import { PROCESS_STEPS } from '../data/consultancyData';
 
 export default function JourneyProcess({ onOpenCounselling }) {
   return (
-    <section className="section-padding" style={{ backgroundColor: '#F7EEDC', paddingBottom: 0 }}>
+    <section className="section-padding" style={{ backgroundColor: '#F4F7FB', paddingBottom: 0 }}>
       <div className="container">
 
         {/* Section Header */}
@@ -78,7 +78,7 @@ export default function JourneyProcess({ onOpenCounselling }) {
           ))}
         </div>
 
-        {/* Bottom CTA Action Banner */}
+        {/* Bottom CTA Action Banner: Ready to take Step 01 today? */}
         <div style={{
           marginTop: '3.5rem',
           textAlign: 'center',
@@ -110,11 +110,11 @@ export default function JourneyProcess({ onOpenCounselling }) {
 
       </div>
 
-      {/* Seamless Color Blend into DestinationsSection */}
+      {/* Seamless Color Blend from Light Blue (#F4F7FB) into Soft Blush Pink (#F8E4E1) */}
       <div style={{
         width: '100%',
-        height: '110px',
-        background: 'linear-gradient(180deg, #F7EEDC 0%, #F7FAF5 100%)',
+        height: '140px',
+        background: 'linear-gradient(180deg, #F4F7FB 0%, #F8E4E1 100%)',
         marginTop: '3.5rem'
       }} />
 

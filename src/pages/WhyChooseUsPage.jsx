@@ -3,15 +3,14 @@ import Hero from '../components/Hero';
 import WhyChooseUs from '../components/WhyChooseUs';
 import JourneyProcess from '../components/JourneyProcess';
 import LeadFormSection from '../components/LeadFormSection';
-import { Award } from 'lucide-react';
 
 export default function WhyChooseUsPage({ onOpenCounselling }) {
   return (
     <div className="why-choose-us-page">
       {/* Reusable Hero Banner with Home Page Design */}
       <Hero
-        badgeTag="Why Choose Aviate"
-        badgeIcon={Award}
+        badgeTag=""
+        badgeIcon={null}
         titlePrefix="Empowering Your "
         titleHighlight="International Success"
         titleSuffix=""
