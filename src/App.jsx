@@ -14,6 +14,7 @@ import UniversitiesPage from './pages/UniversitiesPage';
 import WhyChooseUsPage from './pages/WhyChooseUsPage';
 import ThreeCModelPage from './pages/ThreeCModelPage';
 import SuccessStoriesPage from './pages/SuccessStoriesPage';
+import FreeCounsellingPage from './pages/FreeCounsellingPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 
@@ -91,6 +92,12 @@ export default function App() {
             path="/our-success-stories"
             element={
               <SuccessStoriesPage onOpenCounselling={handleOpenCounselling} />
+            }
+          />
+          <Route
+            path="/free-counselling"
+            element={
+              <FreeCounsellingPage />
             }
           />
           <Route

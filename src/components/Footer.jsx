@@ -119,6 +119,7 @@ export default function Footer() {
               </h4>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.7rem', fontSize: '0.9rem' }}>
                 <li><Link to="/about">About Aviate</Link></li>
+                <li><Link to="/free-counselling">Free Counselling</Link></li>
                 <li><Link to="/3c-model">Aviate 3C Model</Link></li>
                 <li><Link to="/why-choose-us">Why Choose Us</Link></li>
                 <li><Link to="/our-success-stories">OUR Success Stories</Link></li>

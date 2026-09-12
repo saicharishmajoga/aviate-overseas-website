@@ -29,6 +29,7 @@ export default function Header({ onOpenCounselling }) {
     { name: 'Why Choose Us', path: '/why-choose-us' },
     { name: '3C Model', path: '/3c-model' },
     { name: 'OUR Success Stories', path: '/our-success-stories' },
+    { name: 'Free Counselling', path: '/free-counselling' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' }
   ];
@@ -95,7 +96,7 @@ export default function Header({ onOpenCounselling }) {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+          <nav className="desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: '1.1rem' }}>
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
               return (
@@ -104,14 +105,15 @@ export default function Header({ onOpenCounselling }) {
                   to={link.path}
                   style={{
                     color: isActive ? '#F58220' : '#E2E8F0',
-                    fontSize: '0.875rem',
+                    fontSize: '0.85rem',
                     fontWeight: isActive ? 700 : 500,
                     display: 'flex',
                     alignItems: 'center',
                     gap: '0.25rem',
                     padding: '0.35rem 0',
                     borderBottom: isActive ? '2px solid #F58220' : '2px solid transparent',
-                    transition: 'all 0.2s ease'
+                    transition: 'all 0.2s ease',
+                    whiteSpace: 'nowrap'
                   }}
                   onMouseEnter={(e) => { if (!isActive) e.currentTarget.style.color = '#F58220'; }}
                   onMouseLeave={(e) => { if (!isActive) e.currentTarget.style.color = '#E2E8F0'; }}
@@ -143,8 +145,8 @@ export default function Header({ onOpenCounselling }) {
             </a>
 
             {/* Eduo Rounded Pill Free Counselling Button */}
-            <button
-              onClick={() => onOpenCounselling()}
+            <Link
+              to="/free-counselling"
               className="btn header-counselling-btn"
               style={{
                 backgroundColor: '#FFFFFF',
@@ -154,7 +156,10 @@ export default function Header({ onOpenCounselling }) {
                 fontSize: '0.85rem',
                 fontWeight: 700,
                 boxShadow: '0 4px 15px rgba(255, 255, 255, 0.2)',
-                transition: 'all 0.3s ease'
+                transition: 'all 0.3s ease',
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = '#F58220';
@@ -166,7 +171,7 @@ export default function Header({ onOpenCounselling }) {
               }}
             >
               Free Counselling
-            </button>
+            </Link>
 
             {/* Mobile Hamburger Toggle */}
             <button
@@ -221,7 +226,7 @@ export default function Header({ onOpenCounselling }) {
                     borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
                     display: 'flex',
                     alignItems: 'center',
-                    justify: 'space-between'
+                    justifyContent: 'space-between'
                   }}
                 >
                   <span>{link.name}</span>
@@ -230,16 +235,14 @@ export default function Header({ onOpenCounselling }) {
               );
             })}
             <div style={{ marginTop: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenCounselling();
-                }}
+              <Link
+                to="/free-counselling"
+                onClick={() => setMobileMenuOpen(false)}
                 className="btn btn-orange"
-                style={{ width: '100%', borderRadius: '9999px', padding: '0.85rem 1.25rem', fontSize: '0.95rem' }}
+                style={{ width: '100%', borderRadius: '9999px', padding: '0.85rem 1.25rem', fontSize: '0.95rem', textAlign: 'center', textDecoration: 'none' }}
               >
                 Book Free Counselling
-              </button>
+              </Link>
               <a
                 href={`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=Hi%20Aviate,%20I%20want%20to%20know%20about%20study%20abroad%20programs`}
                 target="_blank"
@@ -255,7 +258,7 @@ export default function Header({ onOpenCounselling }) {
       )}
 
       <style>{`
-        @media (max-width: 1100px) {
+        @media (max-width: 1200px) {
           .desktop-nav { display: none !important; }
           .mobile-toggle { display: flex !important; }
           .hide-mobile { display: none !important; }
