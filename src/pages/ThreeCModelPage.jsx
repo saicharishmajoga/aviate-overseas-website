@@ -327,12 +327,12 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
       </section>
 
       {/* 9. CONNECTION TO SUCCESS STORIES */}
-      <section style={{ backgroundColor: '#0B1930', color: '#FFFFFF', padding: '3.5rem 0', textAlignment: 'center', textAlign: 'center' }}>
+      <section style={{ backgroundColor: '#F8E4E1', color: '#0B1930', padding: '3.5rem 0', textAlignment: 'center', textAlign: 'center' }}>
         <div className="container">
-          <h2 style={{ fontSize: '2rem', color: '#FFFFFF', fontWeight: 800, marginBottom: '0.75rem' }}>
+          <h2 style={{ fontSize: '2rem', color: '#0B1930', fontWeight: 800, marginBottom: '0.75rem' }}>
             Want to See Where the 3C Model Can Take You?
           </h2>
-          <p style={{ color: '#CBD5E1', fontSize: '1.05rem', marginBottom: '1.75rem', maxWidth: '650px', margin: '0 auto 1.75rem auto' }}>
+          <p style={{ color: '#475569', fontSize: '1.05rem', marginBottom: '1.75rem', maxWidth: '650px', margin: '0 auto 1.75rem auto' }}>
             Explore real student achievements, scholarship grants, and visa approvals powered by our 3C Model.
           </p>
           <Link to="/our-success-stories" className="btn btn-orange btn-lg">
