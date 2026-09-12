@@ -45,7 +45,7 @@ export default function CostCalculator({ onOpenCounselling }) {
                   1. Select Degree Program:
                 </label>
                 <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap' }}>
-                  {['MBBS', 'BE / B.Tech', 'MS / Masters', 'MBA'].map((deg) => (
+                  {['MBBS', 'Undergraduate Abroad', 'MS / Masters', 'MBA'].map((deg) => (
                     <button
                       key={deg}
                       onClick={() => {

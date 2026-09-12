@@ -83,8 +83,8 @@ export const PROGRAMS_DATA = [
   {
     id: "engineering",
     badge: "Most Popular",
-    title: "Bachelor of Engineering (BE / B.Tech) Abroad",
-    shortTitle: "BE / B.Tech Abroad",
+    title: "Undergraduate Abroad",
+    shortTitle: "Undergraduate Abroad",
     category: "Undergraduate",
     feeRange: "₹12 Lakhs – ₹32 Lakhs / Year",
     popularCountries: ["USA", "UK", "Australia", "Canada", "Germany", "New Zealand"],
@@ -443,5 +443,86 @@ export const FAQS_DATA = [
   {
     q: "Are scholarship options available for Masters and B.Tech abroad?",
     a: "Absoluty. We assist students in identifying merit-based, need-based, and departmental scholarships ranging from $2,000 up to 100% tuition waivers in universities across USA, UK, Canada, Australia, Ireland, and Germany."
+  }
+];
+
+export const SUCCESS_STORIES_DATA = [
+  {
+    id: "story-1",
+    achievement: "Got into the Right College",
+    title: "Admitted to Premier US University for MS CS",
+    studentName: "Aditya Verma",
+    course: "MS in Computer Science",
+    country: "USA",
+    flag: "🇺🇸",
+    university: "University of Texas at Dallas",
+    scholarship: "$10,000 Tuition Bursary",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80",
+    quote: "After understanding my academic profile and career goals, the team helped me shortlist the right universities and guided me throughout the application process."
+  },
+  {
+    id: "story-2",
+    achievement: "Secured a Scholarship",
+    title: "50% International Academic Excellence Scholarship",
+    studentName: "Ananya Sharma",
+    course: "Masters / MBA",
+    country: "UK",
+    flag: "🇬🇧",
+    university: "University of Manchester",
+    scholarship: "50% Tuition Fee Waiver",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=250&q=80",
+    quote: "With the right university selection and application guidance, I was able to secure a scholarship that significantly reduced my education expenses."
+  },
+  {
+    id: "story-3",
+    achievement: "Got My Student Visa Approved",
+    title: "Seamless Visa Approval in 14 Days",
+    studentName: "Karthik Raju",
+    course: "MS / MBA",
+    country: "Australia",
+    flag: "🇦🇺",
+    university: "University of Melbourne",
+    scholarship: "Global Student Grant",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=250&q=80",
+    quote: "From documentation to visa preparation, I received complete guidance that helped me confidently complete my visa process."
+  },
+  {
+    id: "story-4",
+    achievement: "Got the Best-Fit University",
+    title: "100% Tuition-Free Admission in Germany",
+    studentName: "Pooja Reddy",
+    course: "Undergraduate Abroad",
+    country: "Germany",
+    flag: "🇩🇪",
+    university: "Technical University of Munich (TUM)",
+    scholarship: "Zero Tuition Public University",
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=250&q=80",
+    quote: "Aviate matched me with top public German universities fitting my GPA and profile. I'm now pursuing my dream degree with zero tuition fee!"
+  },
+  {
+    id: "story-5",
+    achievement: "Found the Perfect Course & University",
+    title: "NMC & WHO Recognized Medical Degree",
+    studentName: "Sravani K.",
+    course: "MBBS Abroad",
+    country: "Timor Leste",
+    flag: "🇹🇱",
+    university: "National University of Timor-Leste",
+    scholarship: "Affordable Budget Package",
+    avatar: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=250&q=80",
+    quote: "Aviate guided me step-by-step for MBBS admission in Timor Leste! The fee structure is extremely transparent, and Pavan Sir cleared all NMC doubts."
+  },
+  {
+    id: "story-6",
+    achievement: "Got the Right College for My Profile",
+    title: "Direct Admission & Co-op Work Permit",
+    studentName: "Rahul Chowdhury",
+    course: "Undergraduate Abroad",
+    country: "Canada",
+    flag: "🇨🇦",
+    university: "University of Waterloo",
+    scholarship: "Entrance Bursary",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=250&q=80",
+    quote: "The 3C Model profile evaluation matched me with a co-op program in Canada that offers paid internships during my studies. Highly recommended!"
   }
 ];

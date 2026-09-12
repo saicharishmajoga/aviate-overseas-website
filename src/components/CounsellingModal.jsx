@@ -7,7 +7,7 @@ export default function CounsellingModal({ isOpen, onClose, defaultProgram = '',
     fullName: '',
     phone: '',
     email: '',
-    program: defaultProgram || 'BE / B.Tech',
+    program: defaultProgram || 'Undergraduate Abroad',
     country: defaultCountry || 'USA',
     intakeYear: '2026',
     notes: ''
@@ -237,7 +237,7 @@ export default function CounsellingModal({ isOpen, onClose, defaultProgram = '',
                       backgroundColor: '#FFFFFF'
                     }}
                   >
-                    <option value="BE / B.Tech">Bachelor of Engineering (BE / B.Tech)</option>
+                    <option value="Undergraduate Abroad">Undergraduate Abroad</option>
                     <option value="Masters MS/MBA">Masters (MS / MBA)</option>
                     <option value="MBBS Abroad">MBBS Abroad (Timor Leste / Russia / Georgia)</option>
                     <option value="Not Sure Yet">Not Sure Yet</option>

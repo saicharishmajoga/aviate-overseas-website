@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Phone, Menu, X, MessageSquare, ChevronDown, ArrowRight } from 'lucide-react';
 import AviateLogo from './AviateLogo';
 import { COMPANY_INFO } from '../data/consultancyData';
@@ -6,6 +7,7 @@ import { COMPANY_INFO } from '../data/consultancyData';
 export default function Header({ onOpenCounselling }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,14 +22,15 @@ export default function Header({ onOpenCounselling }) {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#hero', hasDropdown: false },
-    { name: 'Programs', href: '#programs', hasDropdown: true },
-    { name: 'Countries', href: '#countries', hasDropdown: true },
-    { name: 'Why Choose Us', href: '#why-us', hasDropdown: false },
-    { name: '3C Model', href: '#3c-model', hasDropdown: false },
-    { name: 'Universities', href: '#universities', hasDropdown: false },
-    { name: 'About', href: '#about-us', hasDropdown: false },
-    { name: 'Contact', href: '#contact', hasDropdown: false }
+    { name: 'Home', path: '/' },
+    { name: 'Programs', path: '/programs' },
+    { name: 'Countries', path: '/countries' },
+    { name: 'Universities', path: '/universities' },
+    { name: 'Why Choose Us', path: '/why-choose-us' },
+    { name: '3C Model', path: '/3c-model' },
+    { name: 'OUR Success Stories', path: '/our-success-stories' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   return (
@@ -87,31 +90,36 @@ export default function Header({ onOpenCounselling }) {
         <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem' }}>
           
           {/* Brand Logo */}
-          <a href="#hero" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
             <AviateLogo theme="light" size={isScrolled ? 'small' : 'medium'} />
-          </a>
+          </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: '1.6rem' }}>
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                style={{
-                  color: '#E2E8F0',
-                  fontSize: '0.925rem',
-                  fontWeight: 500,
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.25rem',
-                  transition: 'color 0.2s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#F58220'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#E2E8F0'}
-              >
-                {link.name}
-              </a>
-            ))}
+          <nav className="desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.path;
+              return (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  style={{
+                    color: isActive ? '#F58220' : '#E2E8F0',
+                    fontSize: '0.875rem',
+                    fontWeight: isActive ? 700 : 500,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.25rem',
+                    padding: '0.35rem 0',
+                    borderBottom: isActive ? '2px solid #F58220' : '2px solid transparent',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => { if (!isActive) e.currentTarget.style.color = '#F58220'; }}
+                  onMouseLeave={(e) => { if (!isActive) e.currentTarget.style.color = '#E2E8F0'; }}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Eduo-Style Pill CTA Buttons */}
@@ -198,26 +206,29 @@ export default function Header({ onOpenCounselling }) {
           overflowY: 'auto'
         }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                style={{
-                  color: '#FFFFFF',
-                  fontSize: '1rem',
-                  fontWeight: 600,
-                  padding: '0.6rem 0',
-                  borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between'
-                }}
-              >
-                <span>{link.name}</span>
-                <ArrowRight size={14} color="#F58220" />
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.path;
+              return (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={() => setMobileMenuOpen(false)}
+                  style={{
+                    color: isActive ? '#F58220' : '#FFFFFF',
+                    fontSize: '1rem',
+                    fontWeight: isActive ? 700 : 600,
+                    padding: '0.6rem 0',
+                    borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justify: 'space-between'
+                  }}
+                >
+                  <span>{link.name}</span>
+                  <ArrowRight size={14} color={isActive ? '#F58220' : '#94A3B8'} />
+                </Link>
+              );
+            })}
             <div style={{ marginTop: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <button
                 onClick={() => {
@@ -244,7 +255,7 @@ export default function Header({ onOpenCounselling }) {
       )}
 
       <style>{`
-        @media (max-width: 992px) {
+        @media (max-width: 1100px) {
           .desktop-nav { display: none !important; }
           .mobile-toggle { display: flex !important; }
           .hide-mobile { display: none !important; }

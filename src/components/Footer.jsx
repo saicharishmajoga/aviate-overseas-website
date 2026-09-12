@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, ArrowUp } from 'lucide-react';
 import AviateLogo from './AviateLogo';
 import { COMPANY_INFO } from '../data/consultancyData';
@@ -52,9 +53,9 @@ export default function Footer() {
 
             {/* Column 1: Brand Info & Social Icons */}
             <div>
-              <a href="#hero" style={{ display: 'inline-block', marginBottom: '1.25rem' }}>
+              <Link to="/" style={{ display: 'inline-block', marginBottom: '1.25rem' }}>
                 <AviateLogo theme="light" size="medium" />
-              </a>
+              </Link>
               <p style={{ fontSize: '0.9rem', color: '#94A3B8', lineHeight: 1.6, marginBottom: '1.5rem' }}>
                 {COMPANY_INFO.tagline}
                 <br />
@@ -88,11 +89,11 @@ export default function Footer() {
                 Study Abroad
               </h4>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.7rem', fontSize: '0.9rem' }}>
-                <li><a href="#programs">BE / B.Tech Abroad</a></li>
-                <li><a href="#programs">Masters (MS / MBA)</a></li>
-                <li><a href="#programs">MBBS Abroad (Timor Leste) 🇹🇱</a></li>
-                <li><a href="#programs">Public German Engineering</a></li>
-                <li><a href="#programs">US STEM OPT Programs</a></li>
+                <li><Link to="/programs">Undergraduate Abroad</Link></li>
+                <li><Link to="/programs">Masters (MS / MBA)</Link></li>
+                <li><Link to="/programs">MBBS Abroad (Timor Leste) 🇹🇱</Link></li>
+                <li><Link to="/programs">Public German Engineering</Link></li>
+                <li><Link to="/programs">US STEM OPT Programs</Link></li>
               </ul>
             </div>
 
@@ -102,26 +103,27 @@ export default function Footer() {
                 Top Destinations
               </h4>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.7rem', fontSize: '0.9rem' }}>
-                <li><a href="#countries">Study in USA 🇺🇸</a></li>
-                <li><a href="#countries">Study in UK 🇬🇧</a></li>
-                <li><a href="#countries">Study in Canada 🇨🇦</a></li>
-                <li><a href="#countries">Study in Australia 🇦🇺</a></li>
-                <li><a href="#countries">Study in Germany 🇩🇪</a></li>
-                <li><a href="#countries">Study in Timor Leste 🇹🇱</a></li>
+                <li><Link to="/countries">Study in USA 🇺🇸</Link></li>
+                <li><Link to="/countries">Study in UK 🇬🇧</Link></li>
+                <li><Link to="/countries">Study in Canada 🇨🇦</Link></li>
+                <li><Link to="/countries">Study in Australia 🇦🇺</Link></li>
+                <li><Link to="/countries">Study in Germany 🇩🇪</Link></li>
+                <li><Link to="/countries">Study in Timor Leste 🇹🇱</Link></li>
               </ul>
             </div>
 
             {/* Column 4: Company & 3C */}
             <div>
               <h4 style={{ color: '#FFFFFF', fontSize: '1.05rem', fontWeight: 700, marginBottom: '1.25rem' }}>
-                Company & 3C
+                Company & Navigation
               </h4>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.7rem', fontSize: '0.9rem' }}>
-                <li><a href="#about-us">About Aviate</a></li>
-                <li><a href="#3c-model">Aviate 3C Model</a></li>
-                <li><a href="#why-us">Why Choose Us</a></li>
-                <li><a href="#universities">Partner Universities</a></li>
-                <li><a href="#contact">Contact Visakhapatnam</a></li>
+                <li><Link to="/about">About Aviate</Link></li>
+                <li><Link to="/3c-model">Aviate 3C Model</Link></li>
+                <li><Link to="/why-choose-us">Why Choose Us</Link></li>
+                <li><Link to="/our-success-stories">OUR Success Stories</Link></li>
+                <li><Link to="/universities">Partner Universities</Link></li>
+                <li><Link to="/contact">Contact Visakhapatnam</Link></li>
               </ul>
             </div>
 

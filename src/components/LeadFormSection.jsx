@@ -7,7 +7,7 @@ export default function LeadFormSection() {
     fullName: '',
     phone: '',
     email: '',
-    program: 'BE / B.Tech',
+    program: 'Undergraduate Abroad',
     country: 'USA',
     intakeYear: '2026'
   });
@@ -256,7 +256,7 @@ export default function LeadFormSection() {
                           backgroundColor: '#FFFFFF'
                         }}
                       >
-                        <option value="BE / B.Tech">BE / B.Tech</option>
+                        <option value="Undergraduate Abroad">Undergraduate Abroad</option>
                         <option value="MS / Masters">MS</option>
                         <option value="MBA">MBA</option>
                         <option value="MBBS Abroad">MBBS</option>

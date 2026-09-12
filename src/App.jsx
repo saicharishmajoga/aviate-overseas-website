@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import StatsBar from './components/StatsBar';
-import ProgramsSection from './components/ProgramsSection';
-import WhyChooseUs from './components/WhyChooseUs';
-import JourneyProcess from './components/JourneyProcess';
-import DestinationsSection from './components/DestinationsSection';
-import CostCalculator from './components/CostCalculator';
-import UniversitiesSection from './components/UniversitiesSection';
-import Testimonials from './components/Testimonials';
-import AboutSection from './components/AboutSection';
-import LeadFormSection from './components/LeadFormSection';
-import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import CounsellingModal from './components/CounsellingModal';
 import CountryModal from './components/CountryModal';
+
+import HomePage from './pages/HomePage';
+import ProgramsPage from './pages/ProgramsPage';
+import CountriesPage from './pages/CountriesPage';
+import UniversitiesPage from './pages/UniversitiesPage';
+import WhyChooseUsPage from './pages/WhyChooseUsPage';
+import ThreeCModelPage from './pages/ThreeCModelPage';
+import SuccessStoriesPage from './pages/SuccessStoriesPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 
 export default function App() {
   const [counsellingModalOpen, setCounsellingModalOpen] = useState(false);
@@ -34,72 +34,100 @@ export default function App() {
   };
 
   return (
-    <div className="aviate-app">
-      {/* Header */}
-      <Header onOpenCounselling={() => handleOpenCounselling()} />
+    <Router>
+      <ScrollToTop />
+      <div className="aviate-app">
+        {/* Consistent Header Across All Pages */}
+        <Header onOpenCounselling={() => handleOpenCounselling()} />
 
-      {/* Hero Banner */}
-      <Hero onOpenCounselling={() => handleOpenCounselling()} />
+        {/* Dynamic Route Pages */}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <HomePage
+                onOpenCounselling={handleOpenCounselling}
+                onSelectCountry={handleSelectCountry}
+              />
+            }
+          />
+          <Route
+            path="/programs"
+            element={
+              <ProgramsPage
+                onOpenCounselling={handleOpenCounselling}
+                onSelectCountry={handleSelectCountry}
+              />
+            }
+          />
+          <Route
+            path="/countries"
+            element={
+              <CountriesPage
+                onSelectCountry={handleSelectCountry}
+                onOpenCounselling={handleOpenCounselling}
+              />
+            }
+          />
+          <Route
+            path="/universities"
+            element={
+              <UniversitiesPage onOpenCounselling={handleOpenCounselling} />
+            }
+          />
+          <Route
+            path="/why-choose-us"
+            element={
+              <WhyChooseUsPage onOpenCounselling={handleOpenCounselling} />
+            }
+          />
+          <Route
+            path="/3c-model"
+            element={
+              <ThreeCModelPage onOpenCounselling={handleOpenCounselling} />
+            }
+          />
+          <Route
+            path="/our-success-stories"
+            element={
+              <SuccessStoriesPage onOpenCounselling={handleOpenCounselling} />
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <AboutPage onOpenCounselling={handleOpenCounselling} />
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <ContactPage onOpenCounselling={handleOpenCounselling} />
+            }
+          />
+        </Routes>
 
-      {/* Statistics Strip */}
-      <StatsBar />
+        {/* Consistent Footer Across All Pages */}
+        <Footer />
 
-      {/* Programs Section */}
-      <ProgramsSection
-        onOpenCounselling={handleOpenCounselling}
-        onSelectCountry={(countryName) => handleOpenCounselling('', countryName)}
-      />
+        {/* Floating Widgets */}
+        <FloatingWhatsApp />
 
-      {/* Why Choose Us & 3C Model */}
-      <WhyChooseUs onOpenCounselling={() => handleOpenCounselling()} />
+        {/* Counselling Lead Modal */}
+        <CounsellingModal
+          isOpen={counsellingModalOpen}
+          onClose={() => setCounsellingModalOpen(false)}
+          defaultProgram={defaultProgram}
+          defaultCountry={defaultCountry}
+        />
 
-      {/* 9-Step Student Journey */}
-      <JourneyProcess onOpenCounselling={() => handleOpenCounselling()} />
-
-      {/* Study Destinations Grid */}
-      <DestinationsSection
-        onSelectCountry={handleSelectCountry}
-        onOpenCounselling={() => handleOpenCounselling()}
-      />
-
-      {/* Budget & Cost Calculator */}
-      <CostCalculator onOpenCounselling={handleOpenCounselling} />
-
-      {/* Partner Universities */}
-      <UniversitiesSection onOpenCounselling={() => handleOpenCounselling()} />
-
-      {/* Real Student Testimonials */}
-      <Testimonials />
-
-      {/* About Aviate */}
-      <AboutSection onOpenCounselling={() => handleOpenCounselling()} />
-
-      {/* Embedded Counselling Lead Capture Form */}
-      <LeadFormSection />
-
-      {/* Contact Section & Map */}
-      <ContactSection />
-
-      {/* Footer */}
-      <Footer onOpenCounselling={() => handleOpenCounselling()} />
-
-      {/* Floating Widgets */}
-      <FloatingWhatsApp />
-
-      {/* Counselling Lead Modal */}
-      <CounsellingModal
-        isOpen={counsellingModalOpen}
-        onClose={() => setCounsellingModalOpen(false)}
-        defaultProgram={defaultProgram}
-        defaultCountry={defaultCountry}
-      />
-
-      {/* Country Requirements Modal */}
-      <CountryModal
-        country={selectedCountryDetail}
-        onClose={() => setSelectedCountryDetail(null)}
-        onBookCounselling={(countryName) => handleOpenCounselling('', countryName)}
-      />
-    </div>
+        {/* Country Requirements Modal */}
+        <CountryModal
+          country={selectedCountryDetail}
+          onClose={() => setSelectedCountryDetail(null)}
+          onBookCounselling={(countryName) => handleOpenCounselling('', countryName)}
+        />
+      </div>
+    </Router>
   );
 }
