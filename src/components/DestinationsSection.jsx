@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Globe, Search, ArrowRight, Sparkles, Filter, ExternalLink } from 'lucide-react';
 import { DESTINATIONS_DATA } from '../data/consultancyData';
 
-export default function DestinationsSection({ onSelectCountry, onOpenCounselling }) {
+export default function DestinationsSection({ onSelectCountry, onOpenCounselling, featuredOnly = false }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterCategory, setFilterCategory] = useState('all');
 
@@ -19,6 +19,53 @@ export default function DestinationsSection({ onSelectCountry, onOpenCounselling
 
     return matchesSearch && matchesCategory;
   });
+
+  if (featuredOnly) {
+    return (
+      <section id="countries" className="section-padding" style={{ backgroundColor: '#F7FAF5' }}>
+        <div className="container">
+          {/* Special Timor Leste Alert Banner */}
+          <div style={{
+            background: 'linear-gradient(135deg, #0B1930, #1E3A5F)',
+            borderRadius: '16px',
+            padding: '1.5rem 2rem',
+            color: '#FFFFFF',
+            marginBottom: 0,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '1rem',
+            border: '2px solid #F58220',
+            boxShadow: '0 12px 28px rgba(245, 130, 32, 0.2)'
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+              <span style={{ fontSize: '3rem' }}>🇹🇱</span>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                  <h3 style={{ color: '#FFFFFF', fontSize: '1.35rem', fontWeight: 800 }}>
+                    Featured New Destination: Timor Leste
+                  </h3>
+                  <span className="badge badge-new" style={{ fontSize: '0.75rem' }}>
+                    NEW FOR MBBS
+                  </span>
+                </div>
+                <p style={{ color: '#CBD5E1', fontSize: '0.9rem', marginTop: '0.2rem' }}>
+                  Ultra-affordable NMC & WHO approved 6-Year English medium MBBS degree. Low living expense & zero capitation fees!
+                </p>
+              </div>
+            </div>
+            <button
+              onClick={() => onSelectCountry(DESTINATIONS_DATA.find(c => c.id === 'timor-leste'))}
+              className="btn btn-orange btn-sm"
+            >
+              View Timor Leste Details <ArrowRight size={15} />
+            </button>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="countries" className="section-padding" style={{ backgroundColor: '#F7FAF5' }}>

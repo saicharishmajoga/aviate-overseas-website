@@ -1,63 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Award, Globe, Building2, Quote, CheckCircle2, ShieldCheck, HeartHandshake } from 'lucide-react';
+import { ArrowRight, Globe } from 'lucide-react';
 import Hero from '../components/Hero';
 import StatsBar from '../components/StatsBar';
-import ProgramsSection from '../components/ProgramsSection';
 import WhyChooseUs from '../components/WhyChooseUs';
 import DestinationsSection from '../components/DestinationsSection';
-import UniversitiesSection from '../components/UniversitiesSection';
 import LeadFormSection from '../components/LeadFormSection';
 import { SUCCESS_STORIES_DATA } from '../data/consultancyData';
 
 export default function HomePage({ onOpenCounselling, onSelectCountry }) {
   return (
     <div className="home-page">
-      {/* Hero Banner */}
-      <Hero onOpenCounselling={onOpenCounselling} />
+      {/* Hero Banner without top badge text */}
+      <Hero onOpenCounselling={onOpenCounselling} badgeTag={null} />
 
       {/* Trust Stats Strip */}
       <StatsBar />
 
-      {/* Programs Overview */}
-      <div style={{ position: 'relative' }}>
-        <ProgramsSection
-          onOpenCounselling={onOpenCounselling}
-          onSelectCountry={(countryName) => onOpenCounselling('', countryName)}
-        />
-        <div style={{ textAlign: 'center', backgroundColor: '#F4F7FB', paddingBottom: '3.5rem' }}>
-          <Link to="/programs" className="btn btn-navy btn-lg">
-            Explore All Degree Programs <ArrowRight size={18} />
-          </Link>
-        </div>
-      </div>
-
       {/* Why Choose Us & 3C Model Overview */}
       <WhyChooseUs onOpenCounselling={onOpenCounselling} />
 
-      {/* Destinations Preview */}
-      <div style={{ position: 'relative' }}>
-        <DestinationsSection
-          onSelectCountry={onSelectCountry}
-          onOpenCounselling={onOpenCounselling}
-        />
-        <div style={{ textAlign: 'center', backgroundColor: '#F7FAF5', paddingBottom: '3.5rem' }}>
-          <Link to="/countries" className="btn btn-orange btn-lg">
-            View All 15+ Study Destinations <Globe size={18} />
-          </Link>
-        </div>
-      </div>
-
-      {/* Universities Preview */}
-      <UniversitiesSection onOpenCounselling={onOpenCounselling} />
+      {/* Featured New Destination: Timor Leste Block Only */}
+      <DestinationsSection
+        featuredOnly={true}
+        onSelectCountry={onSelectCountry}
+        onOpenCounselling={onOpenCounselling}
+      />
 
       {/* Success Stories Preview Section */}
       <section className="section-padding" style={{ backgroundColor: '#F3E8DA' }}>
         <div className="container">
           <div className="section-header">
-            <span className="section-tag">
-              <Sparkles size={14} /> Proven Student Track Record
-            </span>
             <h2 className="section-title">
               Success Stories That Inspire Us
             </h2>
