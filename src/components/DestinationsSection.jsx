@@ -22,7 +22,7 @@ export default function DestinationsSection({ onSelectCountry, onOpenCounselling
 
   if (featuredOnly) {
     return (
-      <section id="countries" className="section-padding" style={{ backgroundColor: '#F7FAF5' }}>
+      <section id="countries" className="section-padding" style={{ backgroundColor: '#F4F7FB' }}>
         <div className="container">
           {/* Special Timor Leste Alert Banner */}
           <div style={{

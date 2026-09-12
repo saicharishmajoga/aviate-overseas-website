@@ -27,8 +27,8 @@ export default function HomePage({ onOpenCounselling, onSelectCountry }) {
         onOpenCounselling={onOpenCounselling}
       />
 
-      {/* Success Stories Preview Section */}
-      <section className="section-padding" style={{ backgroundColor: '#F3E8DA' }}>
+      {/* Success Stories Preview Section on Light Blue (#F4F7FB) */}
+      <section className="section-padding" style={{ backgroundColor: '#F4F7FB', paddingBottom: 0 }}>
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">
@@ -90,6 +90,14 @@ export default function HomePage({ onOpenCounselling, onSelectCountry }) {
             </Link>
           </div>
         </div>
+
+        {/* Seamless Color Blend from Light Blue (#F4F7FB) into Soft Blush Pink (#F8E4E1) */}
+        <div style={{
+          width: '100%',
+          height: '140px',
+          background: 'linear-gradient(180deg, #F4F7FB 0%, #F8E4E1 100%)',
+          marginTop: '3.5rem'
+        }} />
       </section>
 
       {/* Lead Form CTA */}
