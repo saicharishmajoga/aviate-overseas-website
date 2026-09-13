@@ -51,18 +51,18 @@ export default function LeadFormSection() {
           overflow: 'hidden'
         }} className="form-card-box">
 
-          {/* Glow Graphic Accent */}
+          {/* Subtle Dark Navy Glow Accent */}
           <div style={{
             position: 'absolute',
             bottom: '-20%',
             right: '-10%',
             width: '450px',
             height: '450px',
-            background: 'radial-gradient(circle, rgba(245,130,32,0.25) 0%, rgba(11,25,48,0) 70%)',
+            background: 'radial-gradient(circle, rgba(30,58,138,0.25) 0%, rgba(11,25,48,0) 70%)',
             pointerEvents: 'none'
           }} />
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: '3.5rem', alignItems: 'center' }} className="form-grid">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: '3.5rem', alignItems: 'center', position: 'relative', zIndex: 2 }} className="form-grid">
 
             {/* Left Content */}
             <div>
@@ -122,7 +122,9 @@ export default function LeadFormSection() {
               color: '#0B1930',
               borderRadius: '20px',
               padding: '2.5rem 2rem',
-              boxShadow: '0 20px 40px rgba(0,0,0,0.3)'
+              boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+              position: 'relative',
+              zIndex: 2
             }}>
               {submitted ? (
                 <div style={{ textAlign: 'center', padding: '1.5rem 0' }}>
@@ -298,7 +300,7 @@ export default function LeadFormSection() {
                   <button
                     type="submit"
                     className="btn btn-orange btn-lg"
-                    style={{ width: '100%', marginTop: '0.5rem' }}
+                    style={{ width: '100%', marginTop: '0.5rem', boxShadow: 'none' }}
                     disabled={loading}
                   >
                     {loading ? 'Registering...' : (
