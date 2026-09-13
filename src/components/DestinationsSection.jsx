@@ -133,10 +133,10 @@ export default function DestinationsSection({ onSelectCountry, onOpenCounselling
           <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
             <button
               onClick={() => setFilterCategory('all')}
-              className={`btn btn-sm ${filterCategory === 'all' ? 'btn-navy' : 'btn-outline-white'}`}
+              className={`btn btn-sm ${filterCategory === 'all' ? 'btn-orange' : 'btn-outline-white'}`}
               style={{
                 color: filterCategory === 'all' ? '#FFFFFF' : '#475569',
-                backgroundColor: filterCategory === 'all' ? '#0B1930' : '#FFFFFF',
+                backgroundColor: filterCategory === 'all' ? '#F58220' : '#FFFFFF',
                 border: filterCategory === 'all' ? 'none' : '1px solid #CBD5E1'
               }}
             >
@@ -155,10 +155,10 @@ export default function DestinationsSection({ onSelectCountry, onOpenCounselling
             </button>
             <button
               onClick={() => setFilterCategory('eng_masters')}
-              className={`btn btn-sm ${filterCategory === 'eng_masters' ? 'btn-navy' : 'btn-outline-white'}`}
+              className={`btn btn-sm ${filterCategory === 'eng_masters' ? 'btn-orange' : 'btn-outline-white'}`}
               style={{
                 color: filterCategory === 'eng_masters' ? '#FFFFFF' : '#475569',
-                backgroundColor: filterCategory === 'eng_masters' ? '#0B1930' : '#FFFFFF',
+                backgroundColor: filterCategory === 'eng_masters' ? '#F58220' : '#FFFFFF',
                 border: filterCategory === 'eng_masters' ? 'none' : '1px solid #CBD5E1'
               }}
             >
