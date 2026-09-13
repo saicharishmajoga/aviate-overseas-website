@@ -64,7 +64,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
   ];
 
   return (
-    <div className="three-c-model-page">
+    <div className="three-c-model-page" style={{ width: '100%', maxWidth: '100vw', overflowX: 'hidden' }}>
       {/* Reusable Hero Banner with Home Page Design */}
       <Hero
         badgeTag=""
@@ -82,7 +82,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
       {/* 1. 3C Overview Pillars Summary on Light Blue (#F4F7FB) */}
       <section style={{ backgroundColor: '#F4F7FB', paddingTop: '1rem', paddingBottom: '2.5rem' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem', textAlign: 'left' }} className="grid-3">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem', textAlign: 'left' }} className="grid-3 three-c-pillars-scroll-wrap">
             {AVIATE_3C_MODEL.pillars.map((p) => (
               <div key={p.code} style={{ background: '#FFFFFF', borderRadius: '18px', padding: '1.75rem', border: '1.5px solid #F58220', boxShadow: '0 10px 25px rgba(11,25,48,0.04)' }}>
                 <span className="badge" style={{ backgroundColor: '#F58220', color: '#FFFFFF', marginBottom: '0.75rem', fontSize: '0.85rem' }}>{p.code}</span>
@@ -98,7 +98,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
       {/* 2. C1 — COUNSELLING on Light Blue (#F4F7FB) */}
       <section className="section-padding" style={{ backgroundColor: '#F4F7FB' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: '3.5rem', alignItems: 'center' }} className="grid-2">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: '3.5rem', alignItems: 'center' }} className="grid-2 three-c-feature-grid">
             <div>
               <h2 className="section-title">C1 — Counselling & Profile Alignment</h2>
               <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: 1.65, marginBottom: '1.5rem' }}>
@@ -138,7 +138,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
       {/* 3. C2 — COLLEGE / UNIVERSITY SELECTION on Light Blue (#F4F7FB) */}
       <section className="section-padding" style={{ backgroundColor: '#F4F7FB' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: '3.5rem', alignItems: 'center' }} className="grid-2">
+          <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: '3.5rem', alignItems: 'center' }} className="grid-2 three-c-feature-grid">
             <div style={{ background: '#FFFFFF', borderRadius: '24px', padding: '2.5rem', border: '1.5px solid #F58220', boxShadow: '0 20px 40px rgba(11,25,48,0.06)' }}>
               <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: '#EFF6FF', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#2563EB', marginBottom: '1.25rem' }}>
                 <Building2 size={28} />
@@ -178,7 +178,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
       {/* 4. C3 — COMPLETION / VISA on Light Blue (#F4F7FB) */}
       <section className="section-padding" style={{ backgroundColor: '#F4F7FB' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: '3.5rem', alignItems: 'center' }} className="grid-2">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: '3.5rem', alignItems: 'center' }} className="grid-2 three-c-feature-grid">
             <div>
               <h2 className="section-title">C3 — Completion & Student Visa Approval</h2>
               <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: 1.65, marginBottom: '1.5rem' }}>
@@ -343,6 +343,31 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
 
       {/* 10. FINAL CONVERSION CTA */}
       <LeadFormSection />
+
+      <style>{`
+        @media (max-width: 992px) {
+          .three-c-feature-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+          }
+        }
+        @media (max-width: 768px) {
+          .three-c-pillars-scroll-wrap {
+            display: flex !important;
+            overflow-x: auto !important;
+            scroll-snap-type: x mandatory !important;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 0.75rem !important;
+            gap: 1rem !important;
+          }
+          .three-c-pillars-scroll-wrap > div {
+            min-width: 85% !important;
+            max-width: 85% !important;
+            flex-shrink: 0 !important;
+            scroll-snap-align: start !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
