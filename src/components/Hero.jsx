@@ -126,7 +126,7 @@ export default function Hero({
 
               <button
                 onClick={() => onOpenCounselling && onOpenCounselling()}
-                className="btn btn-outline-white btn-lg"
+                className="btn btn-orange btn-lg"
               >
                 <PhoneCall size={18} /> Talk to a Counsellor
               </button>
