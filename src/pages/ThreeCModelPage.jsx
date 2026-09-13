@@ -147,7 +147,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
               <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: 1.65, marginBottom: '1rem' }}>
                 We compare global university rankings, accreditation status (WHO, NMC, ABET, AACSB), tuition fees, scholarship availability, and post-study work opportunities to match you with top-fit institutions.
               </p>
-              <button onClick={onOpenCounselling} className="btn btn-navy" style={{ width: '100%' }}>
+              <button onClick={onOpenCounselling} className="btn btn-orange" style={{ width: '100%' }}>
                 Explore Best-Fit Universities
               </button>
             </div>
@@ -187,20 +187,20 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '1.5rem' }}>
                 {["Offer Letter Support", "Admission Confirmation", "Documentation Support", "Financial Proofing", "Visa Application Prep", "Visa Documentation", "Mock Interview Drills", "Pre-Departure Briefing", "Travel Guidance", "Accommodation Booking"].map((item, i) => (
                   <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.9rem', color: '#0B1930', fontWeight: 600 }}>
-                    <CheckCircle2 size={16} color="#16A34A" /> {item}
+                    <CheckCircle2 size={16} color="#F58220" /> {item}
                   </div>
                 ))}
               </div>
               <div style={{ background: '#FFFFFF', padding: '1.25rem', borderRadius: '12px', border: '1.5px solid #F58220', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
-                <strong style={{ color: '#16A34A', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.05em' }}>Key Outcomes of C3:</strong>
+                <strong style={{ color: '#F58220', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.05em' }}>Key Outcomes of C3:</strong>
                 <p style={{ color: '#0B1930', fontSize: '0.95rem', fontWeight: 700, marginTop: '0.3rem' }}>
                   Admission completed • Financial proofing verified • Student visa approved • Pre-departure orientation done • Ready to fly abroad!
                 </p>
               </div>
             </div>
 
-            <div style={{ background: '#FFFFFF', borderRadius: '24px', padding: '2.5rem', border: '2px solid #16A34A', boxShadow: '0 20px 40px rgba(22,163,74,0.12)' }}>
-              <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: '#DCFCE7', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#16A34A', marginBottom: '1.25rem' }}>
+            <div style={{ background: '#FFFFFF', borderRadius: '24px', padding: '2.5rem', border: '1.5px solid #F58220', boxShadow: '0 20px 40px rgba(245,130,32,0.12)' }}>
+              <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: '#FFF7ED', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#F58220', marginBottom: '1.25rem' }}>
                 <ShieldCheck size={28} />
               </div>
               <h3 style={{ fontSize: '1.5rem', color: '#0B1930', fontWeight: 800, marginBottom: '0.75rem' }}>99.2% Visa Success Rate</h3>
