@@ -196,7 +196,7 @@ export default function DestinationsSection({ onSelectCountry, onOpenCounselling
                 backgroundColor: '#FFFFFF',
                 borderRadius: '16px',
                 padding: '1.75rem 1.5rem',
-                border: '1px solid #E2E8F0',
+                border: '1.5px solid #F58220',
                 boxShadow: '0 4px 14px rgba(11, 25, 48, 0.04)',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',

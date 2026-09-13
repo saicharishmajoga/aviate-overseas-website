@@ -58,7 +58,7 @@ export default function SuccessStoriesPage({ onOpenCounselling }) {
                   backgroundColor: '#FFFFFF',
                   borderRadius: '20px',
                   padding: '2.25rem 1.75rem',
-                  border: '1px solid #E2E8F0',
+                  border: '1.5px solid #F58220',
                   boxShadow: '0 12px 35px rgba(11, 25, 48, 0.06)',
                   display: 'flex',
                   flexDirection: 'column',

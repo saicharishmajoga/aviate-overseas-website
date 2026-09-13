@@ -124,7 +124,8 @@ export default function LeadFormSection() {
               padding: '2.5rem 2rem',
               boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
               position: 'relative',
-              zIndex: 2
+              zIndex: 2,
+              border: '1.5px solid #F58220'
             }}>
               {submitted ? (
                 <div style={{ textAlign: 'center', padding: '1.5rem 0' }}>

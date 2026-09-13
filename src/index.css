@@ -24,8 +24,8 @@
   --text-light: #94A3B8;
   --text-white: #FFFFFF;
 
-  --border-light: #E2E8F0;
-  --border-medium: #CBD5E1;
+  --border-light: rgba(245, 130, 32, 0.4);
+  --border-medium: #F58220;
   
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -326,7 +326,7 @@ button {
   overflow-y: auto;
   position: relative;
   box-shadow: var(--shadow-xl);
-  border: 1px solid var(--border-light);
+  border: 1.5px solid #F58220;
   padding: 2.5rem;
   animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -399,4 +399,19 @@ button {
     max-height: 92vh;
     border-radius: 16px;
   }
+}
+
+/* All Content Blocks and Cards Orange Outline */
+.story-card,
+.country-card,
+.program-card,
+.university-card,
+.info-card,
+.feature-card,
+.outcome-card,
+.about-motto-card,
+.process-step-card,
+.why-us-card,
+.counselling-step-card {
+  border: 1.5px solid #F58220 !important;
 }

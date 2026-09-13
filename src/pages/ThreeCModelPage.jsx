@@ -84,7 +84,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem', textAlign: 'left' }} className="grid-3">
             {AVIATE_3C_MODEL.pillars.map((p) => (
-              <div key={p.code} style={{ background: '#FFFFFF', borderRadius: '18px', padding: '1.75rem', border: '1px solid #E2E8F0', boxShadow: '0 10px 25px rgba(11,25,48,0.04)' }}>
+              <div key={p.code} style={{ background: '#FFFFFF', borderRadius: '18px', padding: '1.75rem', border: '1.5px solid #F58220', boxShadow: '0 10px 25px rgba(11,25,48,0.04)' }}>
                 <span className="badge" style={{ backgroundColor: '#F58220', color: '#FFFFFF', marginBottom: '0.75rem', fontSize: '0.85rem' }}>{p.code}</span>
                 <h3 style={{ fontSize: '1.25rem', color: '#0B1930', fontWeight: 800, marginBottom: '0.2rem' }}>{p.name}</h3>
                 <div style={{ fontSize: '0.8rem', color: '#F58220', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.5rem' }}>{p.subtitle}</div>
@@ -111,7 +111,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
                   </div>
                 ))}
               </div>
-              <div style={{ background: '#FFFFFF', padding: '1.25rem', borderRadius: '12px', border: '1px solid #CBD5E1', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
+              <div style={{ background: '#FFFFFF', padding: '1.25rem', borderRadius: '12px', border: '1.5px solid #F58220', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
                 <strong style={{ color: '#F58220', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.05em' }}>Key Outcomes of C1:</strong>
                 <p style={{ color: '#0B1930', fontSize: '0.95rem', fontWeight: 700, marginTop: '0.3rem' }}>
                   Clear career direction identified • Optimal course match selected • Suitable country framework determined • Personalized 1-on-1 study roadmap created.
@@ -139,7 +139,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
       <section className="section-padding" style={{ backgroundColor: '#F4F7FB' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: '3.5rem', alignItems: 'center' }} className="grid-2">
-            <div style={{ background: '#FFFFFF', borderRadius: '24px', padding: '2.5rem', border: '1px solid #CBD5E1', boxShadow: '0 20px 40px rgba(11,25,48,0.06)' }}>
+            <div style={{ background: '#FFFFFF', borderRadius: '24px', padding: '2.5rem', border: '1.5px solid #F58220', boxShadow: '0 20px 40px rgba(11,25,48,0.06)' }}>
               <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: '#EFF6FF', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#2563EB', marginBottom: '1.25rem' }}>
                 <Building2 size={28} />
               </div>
@@ -164,7 +164,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
                   </div>
                 ))}
               </div>
-              <div style={{ background: '#FFFFFF', padding: '1.25rem', borderRadius: '12px', border: '1px solid #CBD5E1', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
+              <div style={{ background: '#FFFFFF', padding: '1.25rem', borderRadius: '12px', border: '1.5px solid #F58220', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
                 <strong style={{ color: '#F58220', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.05em' }}>Key Outcomes of C2:</strong>
                 <p style={{ color: '#0B1930', fontSize: '0.95rem', fontWeight: 700, marginTop: '0.3rem' }}>
                   Right course confirmed • Best-fit college shortlisted • Error-free application submitted • Official offer letter received • Scholarship secured.
@@ -191,7 +191,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
                   </div>
                 ))}
               </div>
-              <div style={{ background: '#FFFFFF', padding: '1.25rem', borderRadius: '12px', border: '1px solid #CBD5E1', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
+              <div style={{ background: '#FFFFFF', padding: '1.25rem', borderRadius: '12px', border: '1.5px solid #F58220', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
                 <strong style={{ color: '#16A34A', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.05em' }}>Key Outcomes of C3:</strong>
                 <p style={{ color: '#0B1930', fontSize: '0.95rem', fontWeight: 700, marginTop: '0.3rem' }}>
                   Admission completed • Financial proofing verified • Student visa approved • Pre-departure orientation done • Ready to fly abroad!
@@ -264,7 +264,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
 
           <div className="grid-3" style={{ gap: '1.25rem' }}>
             {studentBenefits.map((benefit, idx) => (
-              <div key={idx} style={{ background: '#FFFFFF', padding: '1.1rem 1.25rem', borderRadius: '14px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '0.75rem', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}>
+              <div key={idx} style={{ background: '#FFFFFF', padding: '1.1rem 1.25rem', borderRadius: '14px', border: '1.5px solid #F58220', display: 'flex', alignItems: 'center', gap: '0.75rem', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}>
                 <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#FFF7ED', color: '#F58220', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   <CheckCircle2 size={16} />
                 </div>
@@ -295,7 +295,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
 
           <div className="grid-4" style={{ gap: '1.5rem' }}>
             {outcomesList.map((item, idx) => (
-              <div key={idx} style={{ background: '#FFFFFF', borderRadius: '16px', padding: '1.5rem', border: '1px solid #E2E8F0', textAlign: 'center', boxShadow: '0 8px 20px rgba(0,0,0,0.03)' }}>
+              <div key={idx} style={{ background: '#FFFFFF', borderRadius: '16px', padding: '1.5rem', border: '1.5px solid #F58220', textAlign: 'center', boxShadow: '0 8px 20px rgba(0,0,0,0.03)' }}>
                 <div style={{ fontSize: '2.5rem', marginBottom: '0.5rem', lineHeight: 1 }}>{item.icon}</div>
                 <h3 style={{ fontSize: '1.1rem', color: '#0B1930', fontWeight: 700, marginBottom: '0.35rem' }}>{item.title}</h3>
                 <p style={{ color: '#64748B', fontSize: '0.85rem', lineHeight: 1.5 }}>{item.desc}</p>
@@ -317,7 +317,7 @@ export default function ThreeCModelPage({ onOpenCounselling }) {
 
           <div className="grid-2" style={{ gap: '1.25rem' }}>
             {whyUsPoints.map((point, idx) => (
-              <div key={idx} style={{ background: '#FFFFFF', padding: '1.1rem 1.25rem', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '0.75rem', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}>
+              <div key={idx} style={{ background: '#FFFFFF', padding: '1.1rem 1.25rem', borderRadius: '12px', border: '1.5px solid #F58220', display: 'flex', alignItems: 'center', gap: '0.75rem', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}>
                 <CheckCircle2 size={18} color="#F58220" />
                 <span style={{ fontSize: '0.95rem', fontWeight: 700, color: '#0B1930' }}>{point}</span>
               </div>

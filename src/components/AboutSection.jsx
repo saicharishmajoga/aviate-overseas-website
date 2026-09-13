@@ -67,7 +67,7 @@ export default function AboutSection({ onOpenCounselling }) {
 
             {/* Vision & Mission Cards */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '2rem' }} className="vision-mission-grid">
-              <div style={{ background: '#FFFFFF', padding: '1.25rem', borderRadius: '14px', border: '1px solid #E2E8F0', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
+              <div style={{ background: '#FFFFFF', padding: '1.25rem', borderRadius: '14px', border: '1.5px solid #F58220', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
                 <div style={{ color: '#F58220', fontWeight: 800, fontSize: '0.85rem', textTransform: 'uppercase', marginBottom: '0.3rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                   <Target size={16} /> Our Vision
                 </div>
@@ -76,7 +76,7 @@ export default function AboutSection({ onOpenCounselling }) {
                 </p>
               </div>
 
-              <div style={{ background: '#FFFFFF', padding: '1.25rem', borderRadius: '14px', border: '1px solid #E2E8F0', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
+              <div style={{ background: '#FFFFFF', padding: '1.25rem', borderRadius: '14px', border: '1.5px solid #F58220', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
                 <div style={{ color: '#F58220', fontWeight: 800, fontSize: '0.85rem', textTransform: 'uppercase', marginBottom: '0.3rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                   <Compass size={16} /> Our Mission
                 </div>

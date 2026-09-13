@@ -59,7 +59,7 @@ export default function UniversitiesSection({ onOpenCounselling, bottomBlendColo
                   backgroundColor: '#FFFFFF',
                   borderRadius: '14px',
                   padding: '1.5rem',
-                  border: isSelected ? '2px solid #F58220' : '1px solid #E2E8F0',
+                  border: isSelected ? '2px solid #F58220' : '1.5px solid #F58220',
                   boxShadow: isSelected ? '0 12px 30px rgba(245, 130, 32, 0.25)' : '0 4px 12px rgba(11, 25, 48, 0.04)',
                   display: 'flex',
                   flexDirection: 'column',

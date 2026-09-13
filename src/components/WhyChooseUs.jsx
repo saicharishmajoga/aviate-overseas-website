@@ -48,7 +48,7 @@ export default function WhyChooseUs({ onOpenCounselling }) {
                 backgroundColor: '#FFFFFF',
                 borderRadius: '16px',
                 padding: '2rem 1.5rem',
-                border: '1px solid #E2E8F0',
+                border: '1.5px solid #F58220',
                 boxShadow: '0 4px 14px rgba(11, 25, 48, 0.04)',
                 transition: 'all 0.3s ease',
                 display: 'flex',

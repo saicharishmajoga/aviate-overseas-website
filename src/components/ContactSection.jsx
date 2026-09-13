@@ -32,7 +32,7 @@ export default function ContactSection() {
               background: '#FFFFFF',
               borderRadius: '16px',
               padding: '1.5rem',
-              border: '1px solid #E2E8F0',
+              border: '1.5px solid #F58220',
               boxShadow: '0 4px 12px rgba(11, 25, 48, 0.03)',
               display: 'flex',
               alignItems: 'flex-start',
@@ -59,7 +59,7 @@ export default function ContactSection() {
               background: '#F0FDF4',
               borderRadius: '16px',
               padding: '1.5rem',
-              border: '1px solid #BBF7D0',
+              border: '1.5px solid #F58220',
               boxShadow: '0 4px 12px rgba(16, 185, 129, 0.06)',
               display: 'flex',
               alignItems: 'flex-start',
@@ -91,7 +91,7 @@ export default function ContactSection() {
               background: '#FFFFFF',
               borderRadius: '16px',
               padding: '1.5rem',
-              border: '1px solid #E2E8F0',
+              border: '1.5px solid #F58220',
               boxShadow: '0 4px 12px rgba(11, 25, 48, 0.03)',
               display: 'flex',
               alignItems: 'flex-start',
@@ -118,7 +118,7 @@ export default function ContactSection() {
               background: '#FFFFFF',
               borderRadius: '16px',
               padding: '1.5rem',
-              border: '1px solid #E2E8F0',
+              border: '1.5px solid #F58220',
               boxShadow: '0 4px 12px rgba(11, 25, 48, 0.03)',
               display: 'flex',
               alignItems: 'flex-start',
@@ -150,7 +150,7 @@ export default function ContactSection() {
             boxShadow: '0 15px 35px rgba(11, 25, 48, 0.12)',
             display: 'flex',
             flexDirection: 'column',
-            border: '1px solid #E2E8F0'
+            border: '1.5px solid #F58220'
           }}>
             <div style={{ padding: '1.5rem 1.75rem', background: '#0B1930', color: '#FFFFFF' }}>
               <h3 style={{ color: '#FFFFFF', fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>

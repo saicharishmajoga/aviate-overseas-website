@@ -48,7 +48,7 @@ export default function HomePage({ onOpenCounselling, onSelectCountry }) {
                   backgroundColor: '#FFFFFF',
                   borderRadius: '20px',
                   padding: '2rem 1.5rem',
-                  border: '1px solid #E2E8F0',
+                  border: '1.5px solid #F58220',
                   boxShadow: '0 10px 30px rgba(11, 25, 48, 0.06)',
                   display: 'flex',
                   flexDirection: 'column',
